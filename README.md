@@ -4,11 +4,20 @@
 
 This project uses [uv](https://github.com/astral/uv) for Python environment and dependency management. Follow these steps to set up your development environment:
 
+##
+
+
 ### Prerequisites
 
 1. Install uv:
+mac/linux:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+windows
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 2. Make sure you have Python 3.10 or higher installed:
