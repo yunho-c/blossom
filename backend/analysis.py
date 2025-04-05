@@ -3,14 +3,16 @@ import numpy as np
 from typing import List, Optional, Union, Tuple
 import plotly.graph_objects as go
 import plotly.express as px
-
+import time
 # local
 from utils import visualize_grid
 
 
 # globals
+time_start = time.time()
 model = FlagAutoModel.from_finetuned("BAAI/bge-m3")  # text embedding model
-
+time_end = time.time()
+print(f"Time taken to load model: {time_end - time_start} seconds")
 
 def calculate_cross_similarity(items: List[str]):
     l = len(items)  # length
