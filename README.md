@@ -4,8 +4,6 @@
 
 This project uses [uv](https://github.com/astral/uv) for Python environment and dependency management. Follow these steps to set up your development environment:
 
-##
-
 
 ### Prerequisites
 
@@ -103,7 +101,6 @@ source .venv/bin/activate  # On Unix/macOS
    ```
 
 5. The virtual environments (`.venv`) are project-specific and should not be committed to version control.
-
 
 6. Run tests using:
 ```bash
