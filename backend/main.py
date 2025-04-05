@@ -25,7 +25,7 @@ class SimilarityRequest(BaseModel):
     items: List[str]
 
     class Config:
-        schema_extra = {"example": {"items": sample_data}}
+        schema_extra = {"example": {"items": sample_data("example")}}
 
 
 class SimilarityResponse(BaseModel):
@@ -34,12 +34,12 @@ class SimilarityResponse(BaseModel):
 
 
 @app.get("/sample_data", response_model=ItemResponse)
-async def get_sample_data():
+async def get_sample_data(name: str):
     """
     Returns a JSON structure containing:
     - A list of strings
     """
-    items = sample_data
+    items = sample_data(name)
 
     return {
         "items": items,

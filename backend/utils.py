@@ -4,8 +4,11 @@ from typing import List, Optional, Union, Tuple
 import plotly.graph_objects as go
 import plotly.express as px
 
-with open(f"{'/'.join(__file__.split('/')[:-1])}/sample_data.json", "r") as f:
-    sample_data = json.load(f)
+
+def sample_data(name):
+    with open(f"{'/'.join(__file__.split('/')[:-1])}/data/{name}.json", "r") as f:
+        data = json.load(f)
+    return data
 
 
 def visualize_grid(
