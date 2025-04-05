@@ -1,43 +1,72 @@
 from fastapi import FastAPI
+import numpy as np
 from pydantic import BaseModel
-from typing import List, Any
 import uvicorn
+from typing import List, Dict, Any
+
+# local
+from analysis import calculate_cross_similarity
+from utils import sample_data
 
 # Create FastAPI app instance
 app = FastAPI(
-    title="Grid Data API",
-    description="A simple REST API that returns a list of strings and a 2D grid data",
-    version="1.0.0"
+    title="Blossom Backend",
+    description="A REST API for text similarity analysis, etc.",
+    version="1.0.0",
 )
 
-# Define response model
-class GridResponse(BaseModel):
-    string_list: List[str]
-    grid_data: List[List[Any]]
 
-@app.get("/", response_model=GridResponse)
-async def get_data():
+# Response models
+class ItemResponse(BaseModel):
+    items: List[str]
+
+
+class SimilarityRequest(BaseModel):
+    items: List[str]
+
+    class Config:
+        schema_extra = {"example": {"items": sample_data}}
+
+
+class SimilarityResponse(BaseModel):
+    items: List[str]
+    similarity_matrix: List[List[float]]
+
+
+@app.get("/sample_data", response_model=ItemResponse)
+async def get_sample_data():
     """
     Returns a JSON structure containing:
     - A list of strings
-    - A 2D grid of data
     """
-    # Sample data
-    string_list = ["apple", "banana", "cherry", "date", "elderberry"]
-
-    # Sample 2D grid (5x5 matrix with numbers)
-    grid_data = [
-        [1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 10],
-        [11, 12, 13, 14, 15],
-        [16, 17, 18, 19, 20],
-        [21, 22, 23, 24, 25]
-    ]
+    items = sample_data
 
     return {
-        "string_list": string_list,
-        "grid_data": grid_data
+        "items": items,
     }
+
+
+@app.post("/similarity", response_model=SimilarityResponse)
+async def get_similarity(request: SimilarityRequest):
+    """
+    Calculate cross-similarity between a list of text items.
+
+    This endpoint uses a text embedding model to calculate cosine similarity
+    between all pairs of text items in the provided list.
+
+    Returns:
+    - The original list of items
+    - A 2D similarity matrix where each cell [i,j] represents the similarity
+      between item i and item j (values range from 0 to 1, where 1 means identical)
+    """
+    # Calculate similarity matrix
+    similarity_matrix = calculate_cross_similarity(request.items)
+
+    # Convert numpy array to list for JSON serialization
+    similarity_list = similarity_matrix.tolist()
+
+    return {"items": request.items, "similarity_matrix": similarity_list}
+
 
 # Additional endpoint to demonstrate API is working
 @app.get("/health")
@@ -46,6 +75,7 @@ async def health_check():
     Simple health check endpoint
     """
     return {"status": "healthy"}
+
 
 # Run the server if this file is executed directly
 if __name__ == "__main__":

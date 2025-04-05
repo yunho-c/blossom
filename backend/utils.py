@@ -1,7 +1,11 @@
+import json
 import numpy as np
 from typing import List, Optional, Union, Tuple
 import plotly.graph_objects as go
 import plotly.express as px
+
+with open(f"{'/'.join(__file__.split('/')[:-1])}/sample_data.json", "r") as f:
+    sample_data = json.load(f)
 
 
 def visualize_grid(
@@ -77,9 +81,13 @@ def visualize_grid(
     # Validate labels if provided
     n_rows, n_cols = grid_data.shape
     if row_labels is not None and len(row_labels) != n_rows:
-        raise ValueError(f"Length of row_labels ({len(row_labels)}) must match number of rows in grid_data ({n_rows})")
+        raise ValueError(
+            f"Length of row_labels ({len(row_labels)}) must match number of rows in grid_data ({n_rows})"
+        )
     if col_labels is not None and len(col_labels) != n_cols:
-        raise ValueError(f"Length of col_labels ({len(col_labels)}) must match number of columns in grid_data ({n_cols})")
+        raise ValueError(
+            f"Length of col_labels ({len(col_labels)}) must match number of columns in grid_data ({n_cols})"
+        )
 
     # Create figure
     fig = go.Figure()
@@ -113,30 +121,26 @@ def visualize_grid(
 
     # Apply custom labels if provided
     if col_labels is not None:
-        xaxis_config.update({
-            "tickmode": "array",
-            "tickvals": list(range(len(col_labels))),
-            "ticktext": col_labels
-        })
+        xaxis_config.update(
+            {
+                "tickmode": "array",
+                "tickvals": list(range(len(col_labels))),
+                "ticktext": col_labels,
+            }
+        )
     else:
-        xaxis_config.update({
-            "tickmode": "linear",
-            "tick0": 0,
-            "dtick": 1
-        })
+        xaxis_config.update({"tickmode": "linear", "tick0": 0, "dtick": 1})
 
     if row_labels is not None:
-        yaxis_config.update({
-            "tickmode": "array",
-            "tickvals": list(range(len(row_labels))),
-            "ticktext": row_labels
-        })
+        yaxis_config.update(
+            {
+                "tickmode": "array",
+                "tickvals": list(range(len(row_labels))),
+                "ticktext": row_labels,
+            }
+        )
     else:
-        yaxis_config.update({
-            "tickmode": "linear",
-            "tick0": 0,
-            "dtick": 1
-        })
+        yaxis_config.update({"tickmode": "linear", "tick0": 0, "dtick": 1})
 
     fig.update_layout(
         title=title,
@@ -168,8 +172,8 @@ def test():
     )
 
     # Example with custom labels
-    row_labels = [f"Row {chr(65+i)}" for i in range(8)]  # Row A, Row B, etc.
-    col_labels = [f"Col {i+1}" for i in range(8)]        # Col 1, Col 2, etc.
+    row_labels = [f"Row {chr(65 + i)}" for i in range(8)]  # Row A, Row B, etc.
+    col_labels = [f"Col {i + 1}" for i in range(8)]  # Col 1, Col 2, etc.
 
     visualize_grid(
         continuous_grid,
