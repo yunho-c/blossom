@@ -33,9 +33,6 @@ source .venv/bin/activate  # On Unix/macOS
 uv pip install -e ".[dev]"
 ```
 
-Available commands:
-- `uv run format` - Format all Python code in the repository
-
 ### Backend Setup
 
 1. Navigate to the backend directory:
@@ -53,21 +50,11 @@ source .venv/bin/activate  # On Unix/macOS
 
 3. Install dependencies (including dev dependencies):
 ```bash
-uv pip install -e ".[dev]"
-```
-
-4. Run development server:
-```bash
-uv run start
+uv sync
 ```
 
 Available commands:
-- `uv run start` - Start development server
-- `uv run test` - Run tests
-- `uv run format` - Format code
-- `uv run typecheck` - Run type checking
-- `uv run migrate` - Run database migrations
-- `uv run makemigrations "message"` - Create new migration
+- `uv run pytest` - Run tests
 
 ### Frontend Setup
 
@@ -78,27 +65,12 @@ cd frontend
 
 2. Create and activate a virtual environment (for Python-related tasks):
 ```bash
-uv venv
+uv sync
 source .venv/bin/activate  # On Unix/macOS
 # or
 .venv\Scripts\activate  # On Windows
 ```
 
-3. Install dependencies (including dev dependencies):
-```bash
-uv pip install -e ".[dev]"
-```
-
-4. Install Playwright browsers:
-```bash
-uv run install-browsers
-```
-
-Available commands:
-- `uv run test` - Run Python tests
-- `uv run format` - Format Python code
-- `uv run e2e` - Run end-to-end tests with browser
-- `uv run install-browsers` - Install/update Playwright browsers
 
 ### Development Workflow
 
@@ -114,29 +86,18 @@ Available commands:
    # For shared dependencies (numpy, pandas, etc.)
    cd /path/to/blossom  # root directory
    uv add package_name
-
+   uv lock
    # For service-specific dependencies
    cd backend  # or frontend
    uv add package_name
-   ```
-
-4. To update dependencies:
-   ```bash
-   uv pip freeze > requirements.txt  # Save current state
-   uv pip install --upgrade package_name
+   uv lock
    ```
 
 5. The virtual environments (`.venv`) are project-specific and should not be committed to version control.
 
-### Code Quality
 
-Both frontend and backend Python code use:
-- Black for code formatting
-- isort for import sorting
-- Ruff for linting
-- MyPy for type checking (backend only)
-
-Run formatting tools using:
+6. Run tests using:
 ```bash
-uv run format
-``` 
+uv run pytest
+```
+
