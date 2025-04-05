@@ -25,11 +25,3 @@ dev = [
     "mypy>=1.8.0",
     "ruff>=0.3.0",
 ]
-
-[tool.uv.scripts]
-start = "uvicorn app.main:app --reload"
-test = "pytest tests/ --cov=app"
-format = { composite = ["black .", "isort .", "ruff check --fix ."] }
-typecheck = "mypy ."
-migrate = "alembic upgrade head"
-makemigrations = "alembic revision --autogenerate -m" 

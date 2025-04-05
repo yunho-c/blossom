@@ -7,6 +7,7 @@ dependencies = [
     "numpy>=1.26.0",
     "pandas>=2.2.0",
     "pydantic>=2.6.0",
+
 ]
 
 [project.optional-dependencies]
@@ -14,12 +15,13 @@ dev = [
     "black>=24.0.0",
     "isort>=5.13.0",
     "ruff>=0.3.0",
+    "pytest>=8.3.5",
 ]
 
-[tool.uv.scripts]
-start = "uvicorn app.main:app --reload"
-test = "pytest tests/ --cov=app"
-format = { composite = ["black .", "isort .", "ruff check --fix ."] }
+#[tool.uv.scripts]
+#start = "uvicorn app.main:app --reload"
+#test = "pytest tests/ --cov=app"
+#format = { composite = ["black .", "isort .", "ruff check --fix ."] }
 
 [tool.uv.workspace]
 members = ["backend/bloom"]
@@ -37,3 +39,6 @@ multi_line_output = 3
 target-version = "py310"
 line-length = 88
 select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
