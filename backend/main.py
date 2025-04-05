@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 from pydantic import BaseModel
 import uvicorn
@@ -13,6 +14,15 @@ app = FastAPI(
     title="Blossom Backend",
     description="A REST API for text similarity analysis, etc.",
     version="1.0.0",
+)
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
