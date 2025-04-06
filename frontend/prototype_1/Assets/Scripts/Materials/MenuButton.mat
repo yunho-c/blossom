@@ -1,0 +1,78 @@
+- !<Material/530a92f6-69e1-4a2b-9471-f2f96a8d3a82>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> caa01012-3757-4074-83db-0cd35d0dfd76
+- !<PassInfo/caa01012-3757-4074-83db-0cd35d0dfd76>
+  CachedProperties:
+    []
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    - NODE_13_DROPLIST_ITEM 0
+    - NODE_27_DROPLIST_ITEM 0
+    - NODE_38_DROPLIST_ITEM 0
+    - NODE_49_DROPLIST_ITEM 0
+    - NODE_69_DROPLIST_ITEM 0
+    - ENABLE_BASE_TEX
+    - ENABLE_OPACITY_TEX
+    - ENABLE_EMISSIVE
+    - NODE_76_DROPLIST_ITEM 1
+  BlendMode: Disabled
+  Properties:
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    baseColor:
+      typeIdx: 5
+      value: {x: 1.000000, y: 1.000000, z: 0.498039, w: 1.000000}
+    baseTex:
+      typeIdx: 9
+      value:
+        id: ea598674-8b0f-4af6-a1f8-0f605ebe4054
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+          mipmaps: false
+        type: Texture2D
+    emissiveColor:
+      typeIdx: 4
+      value: {x: 1.000000, y: 1.000000, z: 0.498039}
+    emissiveIntensity:
+      typeIdx: 1
+      value: 3.590000
+    emissiveTex:
+      typeIdx: 9
+      value:
+        id: e49ba045-8410-4d03-bc76-70590ca4b9df
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+    opacityTex:
+      typeIdx: 9
+      value:
+        id: e49ba045-8410-4d03-bc76-70590ca4b9df
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: Repeat
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+  Pass: !<reference> 16942e41-f6ef-4a85-ad4a-a1dfb3726b11

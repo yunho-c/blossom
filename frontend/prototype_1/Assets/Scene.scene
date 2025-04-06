@@ -2358,7 +2358,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 55.000000, y: -5.000000, z: -65.000000}
+    position: {x: 0.000000, y: 0.000000, z: -90.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -3185,8 +3185,8 @@
     {}
 - !<SceneObject/64fb4594-822d-43bd-b1cd-c8f253408e80>
   PrefabRemaps:
-    - 64fb4594-822d-43bd-b1cd-c8f253408e80: 123d9a08-4f3f-45e6-9f3a-5a28f20dcbce
-    - c829ac42-e937-4f0d-a714-c9968caadcb9: 4a5b6af4-b3a1-4768-909b-4dabe7d97e08
+    - 64fb4594-822d-43bd-b1cd-c8f253408e80: fb601833-6a5c-49ed-b953-e723383b22cc
+    - c829ac42-e937-4f0d-a714-c9968caadcb9: d7c92348-457a-4873-ad54-8f6cfb363958
   Name: SpherePrefab
   Enabled: true
   Layers: 1
@@ -4510,7 +4510,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: -18.000000, y: -3.000000, z: -50.000000}
+    position: {x: -17.500000, y: 21.000000, z: -85.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.500000, y: 1.500000, z: 1.500000}
     hasSegmentScaleCompensation: false
@@ -4991,7 +4991,7 @@
     {}
   ScriptInputs:
     "":
-      ballPrefab: !<reference.ObjectPrefab> 844cbcb1-e0dd-4a46-b115-cd1d1e6dc0ef
+      ballPrefab: !<reference.ObjectPrefab> f5ddbeff-e156-4074-bbe7-825eea949a41
   ScriptTypes:
     "":
       {}
@@ -5767,7 +5767,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 54.000000, y: 20.000000, z: -10.000000}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -8063,7 +8063,7 @@
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
   Materials:
-    - !<reference> dc8d95a2-38db-4252-b48a-06bb4459facd
+    - !<reference> 5e6e1132-90fd-4c58-86f9-eb992e6747f5
   Mesh: !<reference> c09ad349-1946-4964-ae72-c43058805b41
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
   BlendShapesEnabled: true
