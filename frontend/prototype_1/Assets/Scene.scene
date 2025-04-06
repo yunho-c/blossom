@@ -1872,7 +1872,7 @@
   ScriptInputs:
     "":
       stormObject: !<reference.SceneObject> 9b14d40e-2957-489d-83e1-50c84d422f12
-      ballPrefab: !<reference.ObjectPrefab> 2990bce6-9a32-405f-9350-ddf7226e61eb
+      ballPrefab: !<reference.ObjectPrefab> b382fdf5-240c-4c69-a3c2-a18c69739a42
       textPrefab: !<reference.ObjectPrefab> 1f43cd1d-67a4-4860-8ac6-b6f662541880
   ScriptTypes:
     "":
@@ -8659,11 +8659,11 @@
     []
 - !<SceneObject/d572d4f0-2278-47ba-89ad-60a0a1f30326>
   PrefabRemaps:
-    - a309069a-1bcf-45b7-a0b9-79acc5420b19: 370e439b-355f-4058-a6d2-0efd29f0e06d
-    - d572d4f0-2278-47ba-89ad-60a0a1f30326: 1af557ac-ece6-49c8-aed5-833a17f38ad9
-    - db901719-8100-4399-97b5-4849dc1388ae: efa1f8bf-ab8b-4971-985e-a3906ab93ee8
-    - e54af63d-a1d1-47c0-bc3d-e6c6b65ede4b: 433189d6-9a1d-4473-b717-47eb577a8eab
-    - eed70dce-de24-4bc4-bf93-29aebc1b2749: 96dda70e-f652-4235-a898-aab2cdc2a149
+    - a309069a-1bcf-45b7-a0b9-79acc5420b19: 0ad2eeca-d43e-4b45-8df4-bb5a720c99a2
+    - d572d4f0-2278-47ba-89ad-60a0a1f30326: a4250398-a680-44dc-ade7-c1961f65fa41
+    - db901719-8100-4399-97b5-4849dc1388ae: 0d771bc3-dcab-4b10-82a6-fa2528d1b0d3
+    - e54af63d-a1d1-47c0-bc3d-e6c6b65ede4b: 86895b92-441e-4d6f-8631-fb7326718b8e
+    - eed70dce-de24-4bc4-bf93-29aebc1b2749: f640973d-8f6e-4762-9673-a562b280ffa0
   Name: Box Body
   Enabled: true
   Layers: 1

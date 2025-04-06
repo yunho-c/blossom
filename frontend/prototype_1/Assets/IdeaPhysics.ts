@@ -36,7 +36,6 @@ export class NewScript extends BaseScriptComponent {
           for (let item of this.items) {
               let object = this.spawnIdea(item, "evidence");
               this.subSceneObjects.push(object);
-              stringToColor
 
               let textObject = this.textPrefab.instantiate(object); // attach to `object`
               textObject.name = item; // or "abc"
@@ -50,11 +49,32 @@ export class NewScript extends BaseScriptComponent {
               const mesh = object.getComponent("Component.MeshVisual");
               if (mesh) {
                   print("There is mesh!")
-                  const material = mesh.mainMaterial.clone(); // Optional: clone if you don't want to affect others
-                  const randomColor = d3SchemeCategory10[Math.floor(Math.random() * 10)];
-                  material.mainPass.baseColor = new vec4(randomColor[0]/255, randomColor[1]/255, randomColor[2]/255, 1);
+                  const originalMaterial = mesh.mainMaterial;
+                  const material = originalMaterial.clone();
+                  print(`Material cloned (original != clone): ${originalMaterial !== material}`);
+
+                  // Use stringToColor to get unique color per item
+                  const colorStr = stringToColor(item);
+                  const rgb = colorStr.match(/\d+/g);
+                  const uniqueColor = new vec4(
+                      // 0,
+                      // 0,
+                      // 0,
+                      parseInt(rgb[0])/255,
+                      parseInt(rgb[1])/255,
+                      parseInt(rgb[2])/255,
+                      1
+                  );
+
+                  material.mainPass.baseColor = uniqueColor;
                   mesh.mainMaterial = material;
-              }
+                  print(`Set unique color for ${item}: ${colorStr}`);
+
+                  // For PBR specifically:
+                  if (material.getPass(0)) {
+                      material.getPass(0).baseColor = uniqueColor;
+                  }
+            }
           }
       }
   }
@@ -77,9 +97,12 @@ export class NewScript extends BaseScriptComponent {
       const X_RANGE = 100;
       const Y_RANGE = 100;
       const Z_RANGE = 100;
-      let xPos = Math.random() * X_RANGE - (X_RANGE/2);
-      let yPos = Math.random() * Y_RANGE - (Y_RANGE/2);
-      let zPos = Math.random() * Z_RANGE - (Z_RANGE/2);
+      const X_OFFSET = 0;
+      const Y_OFFSET = 0;
+      const Z_OFFSET = -50;
+      let xPos = Math.random() * X_RANGE - (X_RANGE/2) + X_OFFSET;
+      let yPos = Math.random() * Y_RANGE - (Y_RANGE/2) + Y_OFFSET;
+      let zPos = Math.random() * Z_RANGE - (Z_RANGE/2) + Z_OFFSET;
 
       return new vec3(xPos, yPos, zPos);
     }
@@ -112,139 +135,89 @@ export class NewScript extends BaseScriptComponent {
           "Nissan GT-R",
           "Dodge Charger",
           "Subaru Outback",
-          "Mazda MX-5 Miata",
-          "Volvo 240",
-          "Citroen DS",
-          "Renault 5",
-          "Peugeot 205 GTi",
-          "Fiat 500",
-          "Alfa Romeo Giulia",
-          "Cadillac Eldorado",
-          "Buick Riviera",
-          "Chevrolet Impala",
-          "Dodge Ram",
-          "Toyota Land Cruiser",
-          "Jeep Cherokee",
-          "Honda Accord",
-          "Acura NSX",
-          "BMW M3",
-          "Audi A4",
-          "Lexus LS400",
-          "Kia Telluride",
-          "Hyundai Sonata",
-          "Volkswagen Golf GTI",
-          "Ford F-150",
-          "Chevrolet Camaro",
-          "Pontiac GTO",
-          "Datsun 240Z",
-          "Mercedes-Benz 300SL Gullwing",
-          "Ferrari F40",
-          "Lamborghini Countach",
-          "Bugatti Veyron",
+          // "Mazda MX-5 Miata",
+          // "Volvo 240",
+          // "Citroen DS",
+          // "Renault 5",
+          // "Peugeot 205 GTi",
+          // "Fiat 500",
+          // "Alfa Romeo Giulia",
+          // "Cadillac Eldorado",
+          // "Buick Riviera",
+          // "Chevrolet Impala",
+          // "Dodge Ram",
+          // "Toyota Land Cruiser",
+          // "Jeep Cherokee",
+          // "Honda Accord",
+          // "Acura NSX",
+          // "BMW M3",
+          // "Audi A4",
+          // "Lexus LS400",
+          // "Kia Telluride",
+          // "Hyundai Sonata",
+          // "Volkswagen Golf GTI",
+          // "Ford F-150",
+          // "Chevrolet Camaro",
+          // "Pontiac GTO",
+          // "Datsun 240Z",
+          // "Mercedes-Benz 300SL Gullwing",
+          // "Ferrari F40",
+          // "Lamborghini Countach",
+          // "Bugatti Veyron",
           "McLaren F1",
-          "Aston Martin DB5",
-          "Rolls-Royce Phantom",
-          "Tesla Model 3",
-          "Lucid Air",
-          "Rivian R1T",
-          "Toyota Prius",
-          "BMW i3",
-          "Nissan Leaf",
-          "Honda Insight",
-          "Hummer H1",
-          "GMC Yukon",
-          "Ford Bronco",
-          "Subaru WRX",
-          "Mitsubishi Lancer Evolution",
-          "Mercedes G-Class",
-          "Chrysler 300",
-          "Saab 900",
-          "Lincoln Continental",
-          "Oldsmobile 442",
-          "Studebaker Avanti",
-          "DeLorean DMC-12",
-          "Plymouth Barracuda",
-          "AMC Gremlin",
-          "Mazda RX-7",
-          "Toyota Supra",
-          "Lexus RX",
-          "Infiniti Q45",
-          "Dodge Viper",
-          "BMW 7 Series",
-          "Jaguar E-Type",
-          "Volkswagen Bus (Type 2)",
-          "Chevrolet Tahoe",
-          "Nissan 350Z",
-          "Hyundai Elantra",
-          "Peugeot 504",
-          "Fiat Panda",
-          "Opel Kadett",
-          "Skoda Octavia",
-          "Renault Clio",
-          "Ford Focus",
-          "Honda CR-V",
-          "Toyota RAV4",
-          "Mitsubishi Pajero",
-          "Suzuki Jimny",
-          "Chevrolet Bolt EV",
-          "Ford Explorer",
-          "Cadillac Escalade",
-          "Audi R8",
-          "Ferrari 458 Italia",
-          "Lamborghini Huracan",
-          "Koenigsegg Jesko"
+          // "Aston Martin DB5",
+          // "Rolls-Royce Phantom",
+          // "Tesla Model 3",
+          // "Lucid Air",
+          // "Rivian R1T",
+          // "Toyota Prius",
+          // "BMW i3",
+          // "Nissan Leaf",
+          // "Honda Insight",
+          // "Hummer H1",
+          // "GMC Yukon",
+          // "Ford Bronco",
+          // "Subaru WRX",
+          // "Mitsubishi Lancer Evolution",
+          // "Mercedes G-Class",
+          // "Chrysler 300",
+          // "Saab 900",
+          // "Lincoln Continental",
+          // "Oldsmobile 442",
+          // "Studebaker Avanti",
+          // "DeLorean DMC-12",
+          // "Plymouth Barracuda",
+          // "AMC Gremlin",
+          // "Mazda RX-7",
+          // "Toyota Supra",
+          // "Lexus RX",
+          // "Infiniti Q45",
+          // "Dodge Viper",
+          // "BMW 7 Series",
+          // "Jaguar E-Type",
+          // "Volkswagen Bus (Type 2)",
+          // "Chevrolet Tahoe",
+          // "Nissan 350Z",
+          // "Hyundai Elantra",
+          // "Peugeot 504",
+          // "Fiat Panda",
+          // "Opel Kadett",
+          // "Skoda Octavia",
+          // "Renault Clio",
+          // "Ford Focus",
+          // "Honda CR-V",
+          // "Toyota RAV4",
+          // "Mitsubishi Pajero",
+          // "Suzuki Jimny",
+          // "Chevrolet Bolt EV",
+          // "Ford Explorer",
+          // "Cadillac Escalade",
+          // "Audi R8",
+          // "Ferrari 458 Italia",
+          // "Lamborghini Huracan",
+          // "Koenigsegg Jesko"
       ];
 
-    // private weights: number[][] = [
-    // [
-    //   1.000000238418579,
-    //   0.4140651822090149,
-    //   0.6592483520507812,
-    //   0.5094653367996216,
-    //   0.6171855330467224,
-    //   0.49724820256233215
-    // ],
-    // [
-    //   0.4140651822090149,
-    //   0.9999998807907104,
-    //   0.3806169033050537,
-    //   0.44238805770874023,
-    //   0.38415607810020447,
-    //   0.44372376799583435
-    // ],
-    // [
-    //   0.6592483520507812,
-    //   0.3806169033050537,
-    //   0.9999997615814209,
-    //   0.6223424673080444,
-    //   0.5614188313484192,
-    //   0.5190407037734985
-    // ],
-    // [
-    //   0.5094653367996216,
-    //   0.44238805770874023,
-    //   0.6223424673080444,
-    //   1.0000001192092896,
-    //   0.5174458622932434,
-    //   0.6165656447410583
-    // ],
-    // [
-    //   0.6171855330467224,
-    //   0.38415607810020447,
-    //   0.5614188313484192,
-    //   0.5174458622932434,
-    //   1,
-    //   0.4807377755641937
-    // ],
-    // [
-    //   0.49724820256233215,
-    //   0.44372376799583435,
-    //   0.5190407037734985,
-    //   0.6165656447410583,
-    //   0.4807377755641937,
-    //   0.9999998807907104
-    // ]
-    // ];
       private weights: number[][] | null = null // Note: This is actually the similarity matrix from calculateSimilarity response
 
     private update() {
