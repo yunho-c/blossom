@@ -55,11 +55,11 @@
       value: 0
     baseColor:
       typeIdx: 5
-      value: {x: 0.333333, y: 1.000000, z: 1.000000, w: 1.000000}
+      value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
     baseTex:
       typeIdx: 9
       value:
-        id: 480cb6fe-3c45-4f26-a2e8-4808d0b8b5b9
+        id: 6db678ae-492d-4c4b-ab22-ec23a0fc4607
         sampler:
           filteringMode: Trilinear
           wrapModeU: ClampToEdge
@@ -70,11 +70,11 @@
         type: Texture2D
     opacityMul:
       typeIdx: 1
-      value: 1.000000
+      value: 0.730000
     opacityTex:
       typeIdx: 9
       value:
-        id: d2194476-5fa8-4461-899e-19b857032ef9
+        id: 6db678ae-492d-4c4b-ab22-ec23a0fc4607
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat

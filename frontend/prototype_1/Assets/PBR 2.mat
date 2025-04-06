@@ -1,8 +1,8 @@
-- !<Material/194e3390-feb4-4535-a7de-0f7761ed30ec>
+- !<Material/eddc3022-cf2f-4fd5-9e4c-baf289fe5cbc>
   PackagePath: ""
   PassesInfo:
-    - !<own> 31f9f482-0e8a-401a-a51a-577c8fdb8f49
-- !<PassInfo/31f9f482-0e8a-401a-a51a-577c8fdb8f49>
+    - !<own> 88473f53-0156-417d-8a37-3ed1a25419bd
+- !<PassInfo/88473f53-0156-417d-8a37-3ed1a25419bd>
   CachedProperties:
     []
   DepthWrite: true
@@ -36,7 +36,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: ea598674-8b0f-4af6-a1f8-0f605ebe4054
+        id: 20295e73-f5e8-4ff8-b934-94d072778e92
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -48,7 +48,7 @@
     materialParamsTex:
       typeIdx: 9
       value:
-        id: 3d4a1ae4-077c-4e46-8685-7fcc7a5ab4bf
+        id: 59ab5209-e704-478c-b3ff-d7c600362432
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -60,7 +60,7 @@
     normalTex:
       typeIdx: 9
       value:
-        id: e49ba045-8410-4d03-bc76-70590ca4b9df
+        id: 6db678ae-492d-4c4b-ab22-ec23a0fc4607
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -72,4 +72,4 @@
     uvScale:
       typeIdx: 1
       value: 1.000000
-  Pass: !<reference> 9dba63de-24d2-40ba-a5d3-282f8d0cec8d
+  Pass: !<reference> 9b843eba-db77-45e0-8547-20588148cf6e

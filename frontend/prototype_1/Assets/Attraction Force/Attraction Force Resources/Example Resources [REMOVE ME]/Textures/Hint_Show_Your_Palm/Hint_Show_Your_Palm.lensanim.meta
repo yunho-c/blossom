@@ -1,0 +1,30 @@
+- !<AssetImportMetadata/9aaf2366-adee-4926-8a47-9779174db8a2>
+  ImportedAssetIds:
+    AnimatedTexture: !<reference> c3e2ed49-80b9-447a-928e-a8071f9ea08a
+    LPD-185_Show_Your_Palm_new.png: !<reference> 06629f95-a478-438b-9830-35ee5913fa55
+  ImporterName: LensAnimationImporter
+  PrimaryAsset: !<reference> c3e2ed49-80b9-447a-928e-a8071f9ea08a
+  PackageType: LegacyPackage
+  PackagePolicy: CannotBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    AnimatedTexture: !<own> 3539ecd8-9c1d-45a8-b814-04116fa546a9
+  DependentFiles:
+    - LPD-185_Show_Your_Palm_new.png
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<SingleCompressionSettings>
+    CompressorName: None
+    CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<AnimatedTextureData/3539ecd8-9c1d-45a8-b814-04116fa546a9>
+  AutoPlay: false
+  Reversed: false
+  PingPong: false
+  CurrentSequence: LPD-185_Show_Your_Palm_new
+  KeyFramesData:
+    LPD-185_Show_Your_Palm_new:
+      - time: 0.000000
+        value: 0
+      - time: 1.600000
+        value: 24

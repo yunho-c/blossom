@@ -1,0 +1,7 @@
+- !<Matter/b34e75c1-f8ae-46a8-ab42-2448025d1fc4>
+  PackagePath: "Attraction Force Resources/Example Resources [REMOVE ME]/Physics Settings/Physics Matter"
+  Friction: 0.240000
+  RollingFriction: 0.330000
+  SpinningFriction: 0.560000
+  DynamicBounciness: 0.690000
+  StaticBounciness: 0.290000

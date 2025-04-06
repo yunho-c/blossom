@@ -1,11 +1,14 @@
-- !<AssetImportMetadata/a22811f6-3b4a-47b2-aef3-0d86c1524425>
+- !<AssetImportMetadata/1cd81dcd-b0a9-48fe-901a-b1349c731036>
   ImportedAssetIds:
     FileMesh: !<reference> c012bf11-8266-4d99-b510-d32e964b7614
   ImporterName: FileMeshImporter
   PrimaryAsset: !<reference> c012bf11-8266-4d99-b510-d32e964b7614
   PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
   AssetDataMap:
     {}
+  DependentFiles:
+    []
   ImporterSettings: !<FileMeshImporterSettings>
     ModifiedVertexFormats:
       color: Float
@@ -21,8 +24,5 @@
       NormalBits: 8
       ColorBits: 8
     CompressorName: Draco
-  PackagePolicy: CannotBeUnpacked
-  DependentFiles:
-    []
   ExtraData:
     {}

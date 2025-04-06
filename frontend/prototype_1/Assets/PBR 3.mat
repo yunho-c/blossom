@@ -1,8 +1,8 @@
-- !<Material/764172d3-f3ed-4277-a226-9c8f3134bab2>
+- !<Material/cba03ef7-53e1-47d1-b958-1760aec4cd57>
   PackagePath: ""
   PassesInfo:
-    - !<own> ff762e6b-76ed-44db-aa8d-a1811758211c
-- !<PassInfo/ff762e6b-76ed-44db-aa8d-a1811758211c>
+    - !<own> 4755235e-0603-4f93-92af-ae9ff35c71b4
+- !<PassInfo/4755235e-0603-4f93-92af-ae9ff35c71b4>
   CachedProperties:
     []
   DepthWrite: true
@@ -17,9 +17,9 @@
   InstanceCount: 1
   Defines:
     - ENABLE_BASE_TEX
-    - ENABLE_LIGHTING
     - ENABLE_NORMALMAP
-  BlendMode: ColoredGlass
+    - ENABLE_LIGHTING
+  BlendMode: Disabled
   Properties:
     Port_Center_N016:
       typeIdx: 3
@@ -36,7 +36,7 @@
     baseTex:
       typeIdx: 9
       value:
-        id: ea598674-8b0f-4af6-a1f8-0f605ebe4054
+        id: 20295e73-f5e8-4ff8-b934-94d072778e92
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -48,7 +48,7 @@
     materialParamsTex:
       typeIdx: 9
       value:
-        id: 3d4a1ae4-077c-4e46-8685-7fcc7a5ab4bf
+        id: 59ab5209-e704-478c-b3ff-d7c600362432
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -60,7 +60,7 @@
     normalTex:
       typeIdx: 9
       value:
-        id: e49ba045-8410-4d03-bc76-70590ca4b9df
+        id: 6db678ae-492d-4c4b-ab22-ec23a0fc4607
         sampler:
           filteringMode: Trilinear
           wrapModeU: Repeat
@@ -72,4 +72,4 @@
     uvScale:
       typeIdx: 1
       value: 1.000000
-  Pass: !<reference> 9dba63de-24d2-40ba-a5d3-282f8d0cec8d
+  Pass: !<reference> 9b843eba-db77-45e0-8547-20588148cf6e

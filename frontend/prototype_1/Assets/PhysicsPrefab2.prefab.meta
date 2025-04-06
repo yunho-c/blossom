@@ -1,0 +1,88 @@
+- !<AssetImportMetadata/a519ef46-b7fb-48c3-8342-74cbafe890f8>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 810d678d-a871-4d43-8dac-7ef1a7e82df9
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 810d678d-a871-4d43-8dac-7ef1a7e82df9
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 5ed13ef8-f087-428d-9387-a705ce6bbfe3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/08fa967f-a67a-4aaf-b1d2-cb5201704ddf>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cba03ef7-53e1-47d1-b958-1760aec4cd57
+  Mesh: !<reference> df2e3c19-b55b-4eb1-9629-88dc02096d68
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<BodyComponent/46f3d76a-a73c-4c42-ba76-62cbbcd9de59>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 32fa292a-8acb-469e-b941-e9ec518d8ca0
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000
+- !<ObjectPrefab/5a56327b-1a27-4794-a925-2dc987dfd2c0>
+  PackagePath: ""
+  objects:
+    - !<own> 7836594f-15d2-4568-983e-9c112ab4776f
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/5ed13ef8-f087-428d-9387-a705ce6bbfe3>
+  SourceRemaps:
+    - 28c1762e-8a0f-4d54-abc7-94afdce21228: 46f3d76a-a73c-4c42-ba76-62cbbcd9de59
+    - 810d678d-a871-4d43-8dac-7ef1a7e82df9: 5a56327b-1a27-4794-a925-2dc987dfd2c0
+    - 8b88787f-ac5e-4cba-88d0-dd6b09f1c406: 7836594f-15d2-4568-983e-9c112ab4776f
+    - eff2553a-0298-485a-afc9-5517cb63c285: 08fa967f-a67a-4aaf-b1d2-cb5201704ddf
+  SourceState: !<own> 5a56327b-1a27-4794-a925-2dc987dfd2c0
+- !<SceneObject/7836594f-15d2-4568-983e-9c112ab4776f>
+  PrefabRemaps:
+    []
+  Name: Box Body
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 20.543789, y: -10.493813, z: -17.231644}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 08fa967f-a67a-4aaf-b1d2-cb5201704ddf
+    - !<own> 46f3d76a-a73c-4c42-ba76-62cbbcd9de59

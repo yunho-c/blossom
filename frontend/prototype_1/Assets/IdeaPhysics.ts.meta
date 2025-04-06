@@ -1,0 +1,42 @@
+- !<AssetImportMetadata/ff903ab3-c99f-4f83-a0ea-99797924b3c5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d806c0d9-73ea-49b6-b115-f95f9e9211ba
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d806c0d9-73ea-49b6-b115-f95f9e9211ba
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7e8a91db-d62c-4066-a1b7-30fab8bed534
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7e8a91db-d62c-4066-a1b7-30fab8bed534>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 697f746b-cf23-499e-8d1a-343548c02cd0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    ballPrefab: false
+    stormObject: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - ballPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      stormObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input SceneObject stormObject
+    - // @input Asset.ObjectPrefab ballPrefab

@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/485944bb-764a-4473-a4db-ac74453ea06c>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 311ffcdd-f564-41ea-a2bc-6923037dfd7b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 311ffcdd-f564-41ea-a2bc-6923037dfd7b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e34f1f81-b51b-4076-9011-214e4951af93
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e34f1f81-b51b-4076-9011-214e4951af93>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: b6bc5288-7a3f-4965-b842-64a02195b22d
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    applyRelativeForce: false
+    forceToApply: false
+    physicsBody: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - physicsBody: !<reference.BodyComponent> 00000000-0000-0000-0000-000000000000
+      forceToApply: !<Vec3> {x: 0.000000, y: 100.000000, z: 0.000000}
+      applyRelativeForce: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.BodyComponent physicsBody
+    - "// @input vec3 forceToApply = {0,100,0}"
+    - // @input bool applyRelativeForce
