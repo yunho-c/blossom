@@ -324,6 +324,16 @@ export class NewScript extends BaseScriptComponent {
       }
     }
 
+    public reset() {
+        // Destroy all existing objects
+        for (const obj of this.subSceneObjects) {
+            obj.destroy();
+        }
+        this.subSceneObjects = [];
+
+        // Reinitialize
+        this.init();
+    }
 }
 
 /**
