@@ -1,20 +1,20 @@
-- !<AssetImportMetadata/e0ab7ad4-2608-413b-8001-0cd05b27fa06>
+- !<AssetImportMetadata/f6918436-25f2-4caf-acca-71144e2db0c2>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> 78d951f6-515d-470e-a008-e1e1d272b664
+    ObjectPrefab: !<reference> 1f43cd1d-67a4-4860-8ac6-b6f662541880
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> 78d951f6-515d-470e-a008-e1e1d272b664
+  PrimaryAsset: !<reference> 1f43cd1d-67a4-4860-8ac6-b6f662541880
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> 6fc235e7-f4f6-4a94-beba-fc7cf38cf3b4
+    ObjectPrefab: !<own> eecd5816-9721-49fa-b9dd-75cdbf44c0a8
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<Text/23ca6bc2-d483-44a5-8d46-c7f2a5b3f003>
+- !<Text/4cf2e94a-e34f-4b0c-8b13-4ac0ce455dcf>
   PrefabRemaps:
     []
   Name: Text
@@ -31,7 +31,7 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 24
+  FontSize: 18
   Font: !<reference> 13871892-0e42-478a-b77b-b29abc59c03c
   LayoutRect:
     left: -7.500000
@@ -89,20 +89,8 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
-  TwoSided: false
-- !<ObjectPrefab/3b8d0338-cee4-4eeb-baa1-567ee4e32a4b>
-  PackagePath: ""
-  objects:
-    - !<own> 930e8a3b-8c28-4edd-9869-1e3de91173e7
-  LazyLoading: false
-  RetainAssets: true
-- !<ObjectPrefabAssetData/6fc235e7-f4f6-4a94-beba-fc7cf38cf3b4>
-  SourceRemaps:
-    - 5e48b004-1143-4eb1-bed5-4f3f33e4cdd7: 930e8a3b-8c28-4edd-9869-1e3de91173e7
-    - 78d951f6-515d-470e-a008-e1e1d272b664: 3b8d0338-cee4-4eeb-baa1-567ee4e32a4b
-    - 9287bb4e-cf38-4ade-9154-8b27e937dead: 23ca6bc2-d483-44a5-8d46-c7f2a5b3f003
-  SourceState: !<own> 3b8d0338-cee4-4eeb-baa1-567ee4e32a4b
-- !<SceneObject/930e8a3b-8c28-4edd-9869-1e3de91173e7>
+  TwoSided: true
+- !<SceneObject/db1bef00-a089-4d62-bed0-969ab312bf40>
   PrefabRemaps:
     []
   Name: Text
@@ -116,4 +104,16 @@
   Children:
     []
   Components:
-    - !<own> 23ca6bc2-d483-44a5-8d46-c7f2a5b3f003
+    - !<own> 4cf2e94a-e34f-4b0c-8b13-4ac0ce455dcf
+- !<ObjectPrefab/e45cb86a-8d3b-44d1-95bf-3c98fb0991f3>
+  PackagePath: ""
+  objects:
+    - !<own> db1bef00-a089-4d62-bed0-969ab312bf40
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/eecd5816-9721-49fa-b9dd-75cdbf44c0a8>
+  SourceRemaps:
+    - 1f43cd1d-67a4-4860-8ac6-b6f662541880: e45cb86a-8d3b-44d1-95bf-3c98fb0991f3
+    - 5f3b4845-191a-444a-89ff-31110a690bf4: 4cf2e94a-e34f-4b0c-8b13-4ac0ce455dcf
+    - cc7dfb82-6b4c-49fe-8007-cd9b06cf2568: db1bef00-a089-4d62-bed0-969ab312bf40
+  SourceState: !<own> e45cb86a-8d3b-44d1-95bf-3c98fb0991f3

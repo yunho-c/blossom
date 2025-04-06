@@ -1,25 +1,10 @@
-- !<ObjectPrefab/78d951f6-515d-470e-a008-e1e1d272b664>
+- !<ObjectPrefab/1f43cd1d-67a4-4860-8ac6-b6f662541880>
   PackagePath: ""
   objects:
-    - !<own> 5e48b004-1143-4eb1-bed5-4f3f33e4cdd7
+    - !<own> cc7dfb82-6b4c-49fe-8007-cd9b06cf2568
   LazyLoading: false
   RetainAssets: true
-- !<SceneObject/5e48b004-1143-4eb1-bed5-4f3f33e4cdd7>
-  PrefabRemaps:
-    []
-  Name: Text
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 9287bb4e-cf38-4ade-9154-8b27e937dead
-- !<Text/9287bb4e-cf38-4ade-9154-8b27e937dead>
+- !<Text/5f3b4845-191a-444a-89ff-31110a690bf4>
   PrefabRemaps:
     []
   Name: Text
@@ -36,7 +21,7 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 24
+  FontSize: 18
   Font: !<reference> 13871892-0e42-478a-b77b-b29abc59c03c
   LayoutRect:
     left: -7.500000
@@ -94,4 +79,19 @@
     LineSpacing: 1.000000
     CapitalizationOverride: None
   DepthTest: false
-  TwoSided: false
+  TwoSided: true
+- !<SceneObject/cc7dfb82-6b4c-49fe-8007-cd9b06cf2568>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5f3b4845-191a-444a-89ff-31110a690bf4

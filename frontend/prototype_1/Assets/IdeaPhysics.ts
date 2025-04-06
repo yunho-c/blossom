@@ -13,6 +13,8 @@ export class NewScript extends BaseScriptComponent {
     @input
     public textPrefab: ObjectPrefab;
 
+    private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
+
     // private init() {
     //     const rootObject = this.getSceneObject();
     //     if (rootObject) {
@@ -57,8 +59,9 @@ export class NewScript extends BaseScriptComponent {
       }
   }
 
-    onAwake() {
+    async onAwake() {
         this.init();
+        this.weights = (await this.calculateSimilarity(this.items)).similarity_matrix;
         this.createEvent("UpdateEvent").bind(this.update.bind(this));
     }
 
@@ -192,56 +195,57 @@ export class NewScript extends BaseScriptComponent {
           "Koenigsegg Jesko"
       ];
 
-    private weights: number[][] = [
-    [
-      1.000000238418579,
-      0.4140651822090149,
-      0.6592483520507812,
-      0.5094653367996216,
-      0.6171855330467224,
-      0.49724820256233215
-    ],
-    [
-      0.4140651822090149,
-      0.9999998807907104,
-      0.3806169033050537,
-      0.44238805770874023,
-      0.38415607810020447,
-      0.44372376799583435
-    ],
-    [
-      0.6592483520507812,
-      0.3806169033050537,
-      0.9999997615814209,
-      0.6223424673080444,
-      0.5614188313484192,
-      0.5190407037734985
-    ],
-    [
-      0.5094653367996216,
-      0.44238805770874023,
-      0.6223424673080444,
-      1.0000001192092896,
-      0.5174458622932434,
-      0.6165656447410583
-    ],
-    [
-      0.6171855330467224,
-      0.38415607810020447,
-      0.5614188313484192,
-      0.5174458622932434,
-      1,
-      0.4807377755641937
-    ],
-    [
-      0.49724820256233215,
-      0.44372376799583435,
-      0.5190407037734985,
-      0.6165656447410583,
-      0.4807377755641937,
-      0.9999998807907104
-    ]
-    ];
+    // private weights: number[][] = [
+    // [
+    //   1.000000238418579,
+    //   0.4140651822090149,
+    //   0.6592483520507812,
+    //   0.5094653367996216,
+    //   0.6171855330467224,
+    //   0.49724820256233215
+    // ],
+    // [
+    //   0.4140651822090149,
+    //   0.9999998807907104,
+    //   0.3806169033050537,
+    //   0.44238805770874023,
+    //   0.38415607810020447,
+    //   0.44372376799583435
+    // ],
+    // [
+    //   0.6592483520507812,
+    //   0.3806169033050537,
+    //   0.9999997615814209,
+    //   0.6223424673080444,
+    //   0.5614188313484192,
+    //   0.5190407037734985
+    // ],
+    // [
+    //   0.5094653367996216,
+    //   0.44238805770874023,
+    //   0.6223424673080444,
+    //   1.0000001192092896,
+    //   0.5174458622932434,
+    //   0.6165656447410583
+    // ],
+    // [
+    //   0.6171855330467224,
+    //   0.38415607810020447,
+    //   0.5614188313484192,
+    //   0.5174458622932434,
+    //   1,
+    //   0.4807377755641937
+    // ],
+    // [
+    //   0.49724820256233215,
+    //   0.44372376799583435,
+    //   0.5190407037734985,
+    //   0.6165656447410583,
+    //   0.4807377755641937,
+    //   0.9999998807907104
+    // ]
+    // ];
+      private weights: number[][] | null = null // Note: This is actually the similarity matrix from calculateSimilarity response
 
     private update() {
         const stormPosition = this.stormObject.getTransform().getWorldPosition();
@@ -264,7 +268,7 @@ export class NewScript extends BaseScriptComponent {
             const direction = directionVector.normalize();
 
             // Add a force in the direction of the other object (adjust the magnitude as needed)
-            const forceMagnitude = this.weights[i][j]; // Example force value
+            const forceMagnitude = this.weights ? this.weights[i][j] : 0; // Example force value
             const spring_scale = 10;
             const force = direction.uniformScale(forceMagnitude * spring_scale);
 
@@ -306,6 +310,47 @@ export class NewScript extends BaseScriptComponent {
             currentObject.getComponent("Physics.BodyComponent").addForce(totalForce, Physics.ForceMode.Force);
         }}
     }
+
+    private baseUrl = "https://blossom.yunhocho.com";
+
+    public async getSampleData(name: string): Promise<string[]> {
+      try {
+        const response = await this.remoteService.fetch(`${this.baseUrl}/sample_data?name=${name}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        let sampleData = data as SampleDataResponse;
+        print(sampleData.items); // DEBUG
+        return sampleData.items;
+      } catch (error) {
+        failAsync(error);
+        throw error;
+      }
+    }
+
+    public async calculateSimilarity(items: string[]): Promise<SimilarityResponse> {
+      try {
+        const response = await this.remoteService.fetch(`${this.baseUrl}/similarity`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ items }),
+        });
+        const data = await response.json();
+        print(data); // DEBUG
+        let similarityData = data as SimilarityResponse;
+        print(similarityData.similarity_matrix); // DEBUG
+        return similarityData;
+      } catch (error) {
+        failAsync(error);
+        throw error;
+      }
+    }
+
 }
 
 /**
@@ -347,3 +392,18 @@ let d3SchemeCategory10 = [
   [188, 189, 34],
   [23, 190, 207]
 ];
+
+
+export interface SampleDataResponse {
+  items: string[];
+}
+
+export interface SimilarityRequest {
+  items: string[];
+}
+
+export interface SimilarityResponse {
+  items: string[];
+  similarity_matrix: number[][];
+}
+
