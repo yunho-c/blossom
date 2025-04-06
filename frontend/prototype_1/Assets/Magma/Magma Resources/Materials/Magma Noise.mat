@@ -1,0 +1,300 @@
+- !<Material/012c9f43-a8c1-4c3a-b876-b0f6539ed26c>
+  PackagePath: ""
+  PassesInfo:
+    - !<own> e212336d-7345-4006-9622-3d37284cb604
+- !<PassInfo/e212336d-7345-4006-9622-3d37284cb604>
+  CachedProperties:
+    - Port_Default_N051:
+        typeIdx: 1
+        value: 0.000000
+    - Port_Depth_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_FinalColor1_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor2_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_FinalColor3_N004:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    - Port_GSplatPointSize_N004:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N060:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N087:
+        typeIdx: 1
+        value: 0.000000
+    - Port_LODValue_N090:
+        typeIdx: 1
+        value: 0.000000
+    - Port_RayDirection_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_RayOrigin_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldNormal_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 1.000000, z: 0.000000}
+    - Port_WorldPosition_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 0.000000}
+    - Port_WorldTangent_N004:
+        typeIdx: 4
+        value: {x: 0.000000, y: 0.000000, z: 1.000000}
+    - mainColor:
+        typeIdx: 5
+        value: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  DepthWrite: true
+  DepthTest: true
+  DepthFunction: LessEqual
+  TwoSided: false
+  ColorMask: {x: true, y: true, z: true, w: true}
+  CullMode: Back
+  PolygonOffset: {x: 0.000000, y: 0.000000}
+  FrustumCulling: Auto
+  FrustumCullPad: 0.000000
+  InstanceCount: 1
+  Defines:
+    - Tweak_N71
+  BlendMode: Disabled
+  Properties:
+    Port_Direction_N003:
+      typeIdx: 3
+      value: {x: 1.000000, y: 1.000000}
+    Port_Direction_N079:
+      typeIdx: 3
+      value: {x: -1.000000, y: -1.000000}
+    Port_Input1_N000:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N005:
+      typeIdx: 1
+      value: 0.330000
+    Port_Input1_N007:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N010:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N011:
+      typeIdx: 3
+      value: {x: 2.214000, y: -0.823000}
+    Port_Input1_N018:
+      typeIdx: 3
+      value: {x: 0.200000, y: 0.400000}
+    Port_Input1_N020:
+      typeIdx: 3
+      value: {x: 0.500000, y: 0.800000}
+    Port_Input1_N027:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input1_N031:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N037:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input1_N039:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N043:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N046:
+      typeIdx: 1
+      value: 0.005000
+    Port_Input1_N050:
+      typeIdx: 1
+      value: 0.400000
+    Port_Input1_N057:
+      typeIdx: 1
+      value: 0.500000
+    Port_Input1_N069:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N072:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N074:
+      typeIdx: 1
+      value: 0.400000
+    Port_Input1_N078:
+      typeIdx: 1
+      value: 0.000000
+    Port_Input1_N093:
+      typeIdx: 1
+      value: 3.000000
+    Port_Input1_N094:
+      typeIdx: 1
+      value: 4.500000
+    Port_Input2_N000:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N007:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N010:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N031:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N039:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N043:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N072:
+      typeIdx: 1
+      value: 1.000000
+    Port_Input2_N078:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxA_N009:
+      typeIdx: 1
+      value: 0.500000
+    Port_RangeMaxA_N013:
+      typeIdx: 1
+      value: 0.800000
+    Port_RangeMaxA_N014:
+      typeIdx: 1
+      value: 0.900000
+    Port_RangeMaxA_N022:
+      typeIdx: 1
+      value: 0.400000
+    Port_RangeMaxA_N036:
+      typeIdx: 1
+      value: 0.800000
+    Port_RangeMaxA_N048:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxA_N077:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N009:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N013:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N014:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N022:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N036:
+      typeIdx: 1
+      value: 1.000000
+    Port_RangeMaxB_N048:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMaxB_N077:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinA_N009:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinA_N013:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinA_N014:
+      typeIdx: 1
+      value: 0.200000
+    Port_RangeMinA_N022:
+      typeIdx: 1
+      value: 0.100000
+    Port_RangeMinA_N036:
+      typeIdx: 1
+      value: 0.400000
+    Port_RangeMinA_N048:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinA_N077:
+      typeIdx: 1
+      value: 0.300000
+    Port_RangeMinB_N009:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N013:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N014:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N022:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N036:
+      typeIdx: 1
+      value: 0.000000
+    Port_RangeMinB_N048:
+      typeIdx: 1
+      value: 0.500000
+    Port_RangeMinB_N077:
+      typeIdx: 1
+      value: 1.000000
+    Port_Scale_N032:
+      typeIdx: 3
+      value: {x: 500.000000, y: 500.000000}
+    Port_Scale_N038:
+      typeIdx: 3
+      value: {x: 15.000000, y: 15.000000}
+    Port_Scale_N045:
+      typeIdx: 3
+      value: {x: 150.000000, y: 150.000000}
+    Port_Scale_N062:
+      typeIdx: 3
+      value: {x: 20.000000, y: 20.000000}
+    PreviewEnabled:
+      typeIdx: 0
+      value: 0
+    Tweak_N15:
+      typeIdx: 3
+      value: {x: 0.200000, y: 0.200000}
+    Tweak_N19:
+      typeIdx: 1
+      value: 0.350000
+    Tweak_N52:
+      typeIdx: 1
+      value: 0.750000
+    Tweak_N80:
+      typeIdx: 1
+      value: 0.000000
+    highfreqScale:
+      typeIdx: 1
+      value: 2.000000
+    noiseTex:
+      typeIdx: 9
+      value:
+        id: 81fc41b7-52ce-46d9-95ec-ed6f9eb19003
+        sampler:
+          filteringMode: Trilinear
+          wrapModeU: Repeat
+          wrapModeV: Repeat
+          wrapModeW: ClampToEdge
+          borderColor: {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+          mipmaps: false
+        type: Texture2D
+    overrideTimeElapsed:
+      typeIdx: 1
+      value: 0.000000
+    overrideTimeEnabled:
+      typeIdx: 0
+      value: 0
+    simplexScale:
+      typeIdx: 1
+      value: 6.000000
+    smoothness:
+      typeIdx: 1
+      value: 0.470000
+    speed:
+      typeIdx: 1
+      value: 3.500000
+  Pass: !<reference> 0499af33-1c91-427b-a68e-5a6d66bc6772
