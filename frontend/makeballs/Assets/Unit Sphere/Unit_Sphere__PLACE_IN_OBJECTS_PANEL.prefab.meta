@@ -1,0 +1,86 @@
+- !<AssetImportMetadata/64b07957-62de-4cca-9d05-7bf93b2e0ee1>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 11f04d94-57d7-4a09-88d3-19342886d020
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 11f04d94-57d7-4a09-88d3-19342886d020
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 9e8574a3-9b5a-4f71-96ec-864297fef41b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/04dc176b-d542-48a2-abc0-e4533f2873ca>
+  PrefabRemaps:
+    []
+  Name: Unit_Sphere__PLACE_IN_OBJECTS_PANEL
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c5367207-7d06-4028-8fcc-aaa1d937a30c
+- !<ObjectPrefab/5641c6e3-0c1a-41cd-8f2b-060f0bcddd9e>
+  PackagePath: Unit_Sphere__PLACE_IN_OBJECTS_PANEL
+  objects:
+    - !<own> 04dc176b-d542-48a2-abc0-e4533f2873ca
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/9e8574a3-9b5a-4f71-96ec-864297fef41b>
+  SourceRemaps:
+    - 0820bd5c-86e6-4bd7-88ad-1f89d46d18f2: c5367207-7d06-4028-8fcc-aaa1d937a30c
+    - 11f04d94-57d7-4a09-88d3-19342886d020: 5641c6e3-0c1a-41cd-8f2b-060f0bcddd9e
+    - a4406e56-2369-4257-9ad6-fa20fda058e8: 04dc176b-d542-48a2-abc0-e4533f2873ca
+  SourceState: !<own> 5641c6e3-0c1a-41cd-8f2b-060f0bcddd9e
+- !<RenderMeshVisual/c5367207-7d06-4028-8fcc-aaa1d937a30c>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b8ceae26-4b39-4be2-ab01-6e15fb8f5809
+  Mesh: !<reference> f940a10e-f880-4ccf-a764-b366fba10aab
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+  RayTracing: !<RayTracingVisualSettings>
+    Reflections:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+      planar:
+        enabled: true
+        roughHarden: 0.500000
+        roughCurve: 2.000000
+    IndirectDiffuse:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    AmbientOcclusion:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    Shadows:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    Material: !<reference> 00000000-0000-0000-0000-000000000000
+    HideFromCamera: false

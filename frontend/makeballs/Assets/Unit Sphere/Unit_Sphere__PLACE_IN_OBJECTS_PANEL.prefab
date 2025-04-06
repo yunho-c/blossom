@@ -1,0 +1,64 @@
+- !<ObjectPrefab/11f04d94-57d7-4a09-88d3-19342886d020>
+  PackagePath: Unit_Sphere__PLACE_IN_OBJECTS_PANEL
+  objects:
+    - !<own> a4406e56-2369-4257-9ad6-fa20fda058e8
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/0820bd5c-86e6-4bd7-88ad-1f89d46d18f2>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> b8ceae26-4b39-4be2-ab01-6e15fb8f5809
+  Mesh: !<reference> f940a10e-f880-4ccf-a764-b366fba10aab
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+  RayTracing: !<RayTracingVisualSettings>
+    Reflections:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+      planar:
+        enabled: true
+        roughHarden: 0.500000
+        roughCurve: 2.000000
+    IndirectDiffuse:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    AmbientOcclusion:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    Shadows:
+      caster: false
+      receiver: false
+      receiverLayers: 1
+    Material: !<reference> 00000000-0000-0000-0000-000000000000
+    HideFromCamera: false
+- !<SceneObject/a4406e56-2369-4257-9ad6-fa20fda058e8>
+  PrefabRemaps:
+    []
+  Name: Unit_Sphere__PLACE_IN_OBJECTS_PANEL
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0820bd5c-86e6-4bd7-88ad-1f89d46d18f2
