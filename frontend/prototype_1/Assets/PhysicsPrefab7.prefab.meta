@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/20029533-310a-4e41-9408-e0fa7d50c33a>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> db810774-9bb1-4b26-9bc9-58fe72487334
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> db810774-9bb1-4b26-9bc9-58fe72487334
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 112e5afc-a6fe-4781-8380-3dcd186b04f5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/112e5afc-a6fe-4781-8380-3dcd186b04f5>
+  SourceRemaps:
+    - 5a3d5f76-bea8-49bf-95b8-1fd6f88d939b: da82c9c8-c8af-41ca-8af3-f8a01347de88
+    - 67b5c857-bd38-423a-9cef-5f108291c3ee: e470cc18-6617-48b0-94f3-56755a9d390b
+    - 6f44c917-b605-4655-bb4f-7e50096e1d60: bf1988ac-5477-4789-b670-eaa145d57f0f
+    - db810774-9bb1-4b26-9bc9-58fe72487334: 3c8493e7-c579-4466-9d99-a28b1c3f0afe
+    - f0519ed3-b9bd-4330-8062-acb931e6533e: 4088f45b-0938-4120-878c-c835b99c614e
+  SourceState: !<own> 3c8493e7-c579-4466-9d99-a28b1c3f0afe
+- !<ObjectPrefab/3c8493e7-c579-4466-9d99-a28b1c3f0afe>
+  PackagePath: ""
+  objects:
+    - !<own> 4088f45b-0938-4120-878c-c835b99c614e
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/4088f45b-0938-4120-878c-c835b99c614e>
+  PrefabRemaps:
+    []
+  Name: Box Body
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 20.543789, y: -10.493813, z: -17.231644}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e470cc18-6617-48b0-94f3-56755a9d390b
+    - !<own> da82c9c8-c8af-41ca-8af3-f8a01347de88
+    - !<own> bf1988ac-5477-4789-b670-eaa145d57f0f
+- !<ScriptComponent/bf1988ac-5477-4789-b670-eaa145d57f0f>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  ScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ScriptInputsDefault:
+    handColliderName: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      collider: !<reference.ColliderComponent> da82c9c8-c8af-41ca-8af3-f8a01347de88
+      handColliderName: ColliderTargetProvider
+  ScriptTypes:
+    "":
+      {}
+- !<BodyComponent/da82c9c8-c8af-41ca-8af3-f8a01347de88>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 32fa292a-8acb-469e-b941-e9ec518d8ca0
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.050000
+  AngularDamping: 0.000000
+- !<RenderMeshVisual/e470cc18-6617-48b0-94f3-56755a9d390b>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cba03ef7-53e1-47d1-b958-1760aec4cd57
+  Mesh: !<reference> df2e3c19-b55b-4eb1-9629-88dc02096d68
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}

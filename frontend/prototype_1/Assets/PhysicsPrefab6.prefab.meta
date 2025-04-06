@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/0d00ec47-aa8d-4e55-9753-f00a98ebcaaf>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 4da188ff-bed1-4aad-9cdd-15dbd5543dcd
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 4da188ff-bed1-4aad-9cdd-15dbd5543dcd
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> b59716b8-5069-49ed-87de-760355593d1e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/9a2aaf92-7d28-458f-9276-96d79f7be4c9>
+  PrefabRemaps:
+    []
+  Name: Box Body
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 20.543789, y: -10.493813, z: -17.231644}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> ac75035b-e0c4-4c9b-8ea7-3bff20968a37
+    - !<own> e8419107-4326-4826-90c4-181e0359ca80
+    - !<own> b4be48ee-168a-4204-a600-aa83f72e4a2b
+- !<RenderMeshVisual/ac75035b-e0c4-4c9b-8ea7-3bff20968a37>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cba03ef7-53e1-47d1-b958-1760aec4cd57
+  Mesh: !<reference> df2e3c19-b55b-4eb1-9629-88dc02096d68
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/b4be48ee-168a-4204-a600-aa83f72e4a2b>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  ScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ScriptInputsDefault:
+    handColliderName: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      collider: !<reference.ColliderComponent> e8419107-4326-4826-90c4-181e0359ca80
+      handColliderName: ColliderTargetProvider
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/b59716b8-5069-49ed-87de-760355593d1e>
+  SourceRemaps:
+    - 3e89a697-9064-49cd-a5f9-8922b8bed5cf: e8419107-4326-4826-90c4-181e0359ca80
+    - 4da188ff-bed1-4aad-9cdd-15dbd5543dcd: ce6151cf-a00a-488a-a908-93a24239e9dd
+    - 80efbc0e-e173-4e42-9bea-ac0b340ac9de: 9a2aaf92-7d28-458f-9276-96d79f7be4c9
+    - ade496c8-2375-42eb-890c-de001e18b4d0: b4be48ee-168a-4204-a600-aa83f72e4a2b
+    - ba12a3a0-dc5d-4d66-8cc2-165b725ef1cc: ac75035b-e0c4-4c9b-8ea7-3bff20968a37
+  SourceState: !<own> ce6151cf-a00a-488a-a908-93a24239e9dd
+- !<ObjectPrefab/ce6151cf-a00a-488a-a908-93a24239e9dd>
+  PackagePath: ""
+  objects:
+    - !<own> 9a2aaf92-7d28-458f-9276-96d79f7be4c9
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/e8419107-4326-4826-90c4-181e0359ca80>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 32fa292a-8acb-469e-b941-e9ec518d8ca0
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.150000
+  AngularDamping: 0.000000

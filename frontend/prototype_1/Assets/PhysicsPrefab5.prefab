@@ -1,0 +1,84 @@
+- !<ObjectPrefab/db458d58-1902-479b-b15c-55cf62d906fe>
+  PackagePath: ""
+  objects:
+    - !<own> 35631600-fac9-418c-bb5b-f92bbcb68527
+  LazyLoading: false
+  RetainAssets: true
+- !<SceneObject/35631600-fac9-418c-bb5b-f92bbcb68527>
+  PrefabRemaps:
+    []
+  Name: Box Body
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 20.543789, y: -10.493813, z: -17.231644}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> a4e70d52-06bb-4b3d-bb5d-dc3390be4d3b
+    - !<own> e2c2a909-0e56-4803-a5c4-2d40fbc31ab3
+    - !<own> c5b12fc2-dc7b-403d-a69e-d92bb9b85457
+- !<RenderMeshVisual/a4e70d52-06bb-4b3d-bb5d-dc3390be4d3b>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cba03ef7-53e1-47d1-b958-1760aec4cd57
+  Mesh: !<reference> df2e3c19-b55b-4eb1-9629-88dc02096d68
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/c5b12fc2-dc7b-403d-a69e-d92bb9b85457>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  ScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ScriptInputsDefault:
+    collider: true
+    handColliderName: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      handColliderName: ColliderTargetProvider
+  ScriptTypes:
+    "":
+      {}
+- !<BodyComponent/e2c2a909-0e56-4803-a5c4-2d40fbc31ab3>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 32fa292a-8acb-469e-b941-e9ec518d8ca0
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.000000
+  AngularDamping: 0.000000

@@ -17,8 +17,8 @@ export class Grabbable extends BaseScriptComponent {
     @input
     public handColliderName:string = "ColliderTargetProvider"
 
-    @input
-    textObject: SceneObject;
+    // @input
+    // textObject: SceneObject;
 
     private gestureModule: GestureModule = require('LensStudio:GestureModule');
 
@@ -78,7 +78,7 @@ export class Grabbable extends BaseScriptComponent {
             this.isGrabbed = true;
             this.onGrabStartEvent.invoke(interactor);
         }
-        this.textObject.enabled = true;
+        // this.textObject.enabled = true;
     }
 
     private onGrabEnd (interactor:Interactor) {
@@ -86,7 +86,7 @@ export class Grabbable extends BaseScriptComponent {
             this.onGrabEndEvent.invoke(interactor);
         }
         this.isGrabbed = false;
-        this.textObject.enabled = false;
+        // this.textObject.enabled = false;
     }
 
 }
