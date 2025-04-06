@@ -1,5 +1,5 @@
 - !<ObjectPrefab/a6c9134a-ac4c-48d0-99e8-f2f78aa276ec>
-  PackagePath: Sparkles__PLACE_IN_OBJECTS_PANEL
+  PackagePath: ""
   objects:
     - !<own> 5e51eb1a-1455-4160-b005-a192b490f8d1
   LazyLoading: false

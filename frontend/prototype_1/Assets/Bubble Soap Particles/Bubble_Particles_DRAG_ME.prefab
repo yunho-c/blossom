@@ -1,5 +1,5 @@
 - !<ObjectPrefab/74adcf87-3b12-4e23-accb-9c47edf9713b>
-  PackagePath: Bubble_Particles_DRAG_ME
+  PackagePath: ""
   objects:
     - !<own> bc98daef-95d3-4409-967d-4eccc33c5302
   LazyLoading: false

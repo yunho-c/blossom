@@ -1,5 +1,5 @@
 - !<ObjectPrefab/fc057b96-b2dd-4143-af12-a19b0cec2ffc>
-  PackagePath: Double_Sided_Glass__PLACE_IN_OBJECTS_PANEL
+  PackagePath: ""
   objects:
     - !<own> 17d2be52-df4b-48b2-9701-ffc0a4dd92b9
   LazyLoading: false

@@ -13,7 +13,7 @@
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
   ExtraData:
-    {}
+    AssetLibraryId: 3q7luyiTfoPqDZPRti4WrK
 - !<ScriptAssetData/c8bbbbb3-b4ab-4ea3-b469-f3fd507f2860>
   SvgIcon: ""
   Description: ""

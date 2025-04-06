@@ -1,0 +1,72 @@
+- !<AssetImportMetadata/9c9a087f-afb5-4c99-af40-373c8e21c7c4>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 93b9d486-4c40-4622-bbd4-6272c8c0134b
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 93b9d486-4c40-4622-bbd4-6272c8c0134b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> d4d44df2-5059-4971-9421-e3ea5060c4aa
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/168d6025-cccc-4edc-bbe8-05aedad661a0>
+  PackagePath: Galaxy__PLACE_IN_OBJECTS_PANEL
+  objects:
+    - !<own> f1c825fd-6fec-426c-a303-b8ff16a5da89
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/d4d44df2-5059-4971-9421-e3ea5060c4aa>
+  SourceRemaps:
+    - 3df5defd-6365-4bef-8aad-48676d47b03b: f8dbf751-715f-4acd-b050-2c3d461855db
+    - 8468e558-9f04-471a-8a2b-650e6567e126: f1c825fd-6fec-426c-a303-b8ff16a5da89
+    - 93b9d486-4c40-4622-bbd4-6272c8c0134b: 168d6025-cccc-4edc-bbe8-05aedad661a0
+    - 9c36510a-ecc3-496a-8958-e6a2c52881d8: d818d19d-9794-47eb-84dc-af015d8339e4
+  SourceState: !<own> 168d6025-cccc-4edc-bbe8-05aedad661a0
+- !<SceneObject/d818d19d-9794-47eb-84dc-af015d8339e4>
+  PrefabRemaps:
+    []
+  Name: Galaxy
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 1.167656, y: 3.529694, z: -143.520782}
+    rotation: {x: 47.114452, y: 29.681414, z: 3.924958}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f8dbf751-715f-4acd-b050-2c3d461855db
+- !<SceneObject/f1c825fd-6fec-426c-a303-b8ff16a5da89>
+  PrefabRemaps:
+    []
+  Name: Galaxy__PLACE_IN_OBJECTS_PANEL
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> d818d19d-9794-47eb-84dc-af015d8339e4
+  Components:
+    []
+- !<VFXComponent/f8dbf751-715f-4acd-b050-2c3d461855db>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> 17bcf58b-0d97-462a-9641-c4dc228ba118

@@ -6,7 +6,7 @@
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
-    {}
+    AssetLibraryId: 6Nfapbtyx2fJDUEuAfzDvG
   AssetDataMap:
     JavaScriptAsset: !<own> a4752e98-92ba-497c-89c2-b8ffe318ecbb
   DependentFiles:
@@ -21,7 +21,7 @@
   VersionMajor: 0
   VersionMinor: 0
   VersionPatch: 0
-  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ComponentUid: 3856b475-f7d4-49e5-81ee-7b1d8b4e2837
   ExportUid: 00000000-0000-0000-0000-000000000000
   CurrentVisibility: Editable
   MaxVisibility: Editable

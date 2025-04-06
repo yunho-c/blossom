@@ -1,0 +1,211 @@
+- !<ObjectPrefab/773553f6-c993-4746-a7ab-70d53b53004a>
+  PackagePath: ""
+  objects:
+    - !<own> 83d1006a-69f3-4fc1-9cc8-63f40b8466e6
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/0c4ab91e-4b4f-4aec-872b-2e48247ac9ec>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 2
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f9f252b2-a2fc-4b1e-90d3-2ba6fe800522
+  Mesh: !<reference> 79aa1e02-93db-4efc-a0ae-3ba99dedac71
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/17522d01-38a7-4b82-a3da-42498f82f986>
+  PrefabRemaps:
+    []
+  Name: Magma Noise
+  Enabled: true
+  Layers: 2
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: -1.000000}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 32.000000, y: 32.000000, z: 32.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 62733983-f972-42cd-88cd-fb26317d9a2a
+    - !<own> 5fed771b-4fba-4f3e-8fa9-46417befd36d
+- !<PostEffectVisual/22c2a60c-c1d5-4e92-808c-c2dc0768e027>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 5
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 3a6c482c-17ce-40d0-a67e-372759085eb7
+- !<SceneObject/26744b7b-c905-4e7f-9acc-04da675bc9ff>
+  PrefabRemaps:
+    []
+  Name: Normals from Heightmap
+  Enabled: true
+  Layers: 2
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 22c2a60c-c1d5-4e92-808c-c2dc0768e027
+- !<Camera/2b2d75e3-35c2-4a6a-afcc-5d1191e6085a>
+  PrefabRemaps:
+    []
+  Name: Camera
+  Enabled: true
+  renderLayer: 2
+  MipmapLevel: 0
+  RenderOrder: 1
+  Size: 20.000000
+  Near: 1.000000
+  Far: 200.000000
+  Fov: 63.541019
+  ClearColor: !<CameraClearColor>
+    Mode: None
+    Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  ClearDepth: !<CameraClearDepth>
+    Mode: None
+    Value: 1.000000
+    InputTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  Aspect: 1.000000
+  CameraType: Orthographic
+  DepthMode: Regular
+  DeviceProperty: All
+  AspectPreset: Custom
+  OitLayers: NoOit
+  RenderTarget: !<reference> bc43b05a-4dc0-40c9-a06d-68039bd7ba10
+  DepthStencilRenderTarget: !<reference> 00000000-0000-0000-0000-000000000000
+  MaskTexture: !<reference> 00000000-0000-0000-0000-000000000000
+  RayTracing: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/318b2262-e038-458a-9940-d122b2d99005>
+  PrefabRemaps:
+    []
+  Name: Orthographic Camera - Magma Noise Prepass
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> 17522d01-38a7-4b82-a3da-42498f82f986
+    - !<own> e69b822c-8025-4c69-b5bf-85002ea1cbb7
+    - !<own> 26744b7b-c905-4e7f-9acc-04da675bc9ff
+  Components:
+    - !<own> 2b2d75e3-35c2-4a6a-afcc-5d1191e6085a
+- !<PostEffectVisual/5bfe6272-db87-4b05-ae66-2ffb23578771>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 4
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 9578201a-33cc-4ac2-8783-df92a90ee3ed
+- !<PostEffectVisual/5fed771b-4fba-4f3e-8fa9-46417befd36d>
+  PrefabRemaps:
+    []
+  Name: Post Effect
+  Enabled: true
+  RenderOrder: 3
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 012c9f43-a8c1-4c3a-b876-b0f6539ed26c
+- !<Image/62733983-f972-42cd-88cd-fb26317d9a2a>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: false
+  RenderOrder: 3
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 012c9f43-a8c1-4c3a-b876-b0f6539ed26c
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+- !<SceneObject/83d1006a-69f3-4fc1-9cc8-63f40b8466e6>
+  PrefabRemaps:
+    []
+  Name: Magma
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 47.864948, y: 13.546921, z: 35.130360}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    - !<own> be6fca66-6a3d-416e-8f5a-3fd500395497
+    - !<own> 318b2262-e038-458a-9940-d122b2d99005
+  Components:
+    []
+- !<SceneObject/be6fca66-6a3d-416e-8f5a-3fd500395497>
+  PrefabRemaps:
+    []
+  Name: Magma Object
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 0c4ab91e-4b4f-4aec-872b-2e48247ac9ec
+- !<SceneObject/e69b822c-8025-4c69-b5bf-85002ea1cbb7>
+  PrefabRemaps:
+    []
+  Name: Make Tileable
+  Enabled: true
+  Layers: 2
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 5bfe6272-db87-4b05-ae66-2ffb23578771
