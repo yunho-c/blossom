@@ -1,0 +1,64 @@
+- !<AssetImportMetadata/cb4ca557-724e-41da-80e6-cfd22452f510>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 4e0622a8-82f2-491a-bc5a-fe04a93a3228
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 4e0622a8-82f2-491a-bc5a-fe04a93a3228
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 7732b195-482e-4bdb-8e2b-f93cc8b89781
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/17c1b50e-d341-4ac2-97ba-d8cc92ede96e>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 7c2f3e92-6da8-4119-9bd2-fff4b75e7a70
+    - !<reference> d7e00679-9abe-427e-b5ba-867b5548f2b8
+  Mesh: !<reference> 90f441d7-209a-41d0-a48e-b33ad32fcac5
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefab/1d40c363-addd-49c1-9941-af5ed8282be9>
+  PackagePath: ""
+  objects:
+    - !<own> c6c87e7d-436b-456a-a8d5-92874275ddee
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/7732b195-482e-4bdb-8e2b-f93cc8b89781>
+  SourceRemaps:
+    - 4e0622a8-82f2-491a-bc5a-fe04a93a3228: 1d40c363-addd-49c1-9941-af5ed8282be9
+    - 87c8804e-d8b8-4089-abdd-ea5b62a14540: 17c1b50e-d341-4ac2-97ba-d8cc92ede96e
+    - e9f97fc5-4e55-4084-9f33-4793e8a2a6ce: c6c87e7d-436b-456a-a8d5-92874275ddee
+  SourceState: !<own> 1d40c363-addd-49c1-9941-af5ed8282be9
+- !<SceneObject/c6c87e7d-436b-456a-a8d5-92874275ddee>
+  PrefabRemaps:
+    []
+  Name: Storm_Sphere_THing
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: -1.490517, z: -109.539093}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 100.000000, y: 100.000000, z: 100.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 17c1b50e-d341-4ac2-97ba-d8cc92ede96e

@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/6c520097-0c10-47a1-a36c-3ef65c892f7a>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> 7c94376b-74d6-4e23-8bab-ac05345af289
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> 7c94376b-74d6-4e23-8bab-ac05345af289
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    JavaScriptAsset: !<own> 39191658-15b9-4a9b-92e3-3fb546da0638
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/39191658-15b9-4a9b-92e3-3fb546da0638>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 00000000-0000-0000-0000-000000000000
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    glassMaterial: false
+    glassMesh: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - glassMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glassMesh: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
