@@ -13,6 +13,7 @@
     - !<own> 22414ce0-8dd7-4503-8e1c-979ad9884a75
     - !<own> de2cc8a2-692a-4d6e-a2c3-bfb382a83384
     - !<own> 3b75066b-ec81-4215-ad0b-a002c962a0c1
+    - !<own> 64904b92-decc-44d9-ac3d-e5058936bf05
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -2537,12 +2538,13 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    position: {x: 0.000000, y: 0.000000, z: -50.000000}
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
   Children:
     - !<own> 9b14d40e-2957-489d-83e1-50c84d422f12
+    - !<own> cbcaa9bd-1482-499d-8c5a-8024baed0e79
   Components:
     - !<own> 2999bca4-6caf-40f5-aea2-2d743e608acb
 - !<SceneObject/3d1053b6-58f6-4f01-bf21-3a9fe73d338c>
@@ -4535,6 +4537,21 @@
     - !<own> efa5291d-c6f8-4527-85f3-4ca4fd596089
   Components:
     - !<own> 0cf69278-62e3-4391-8564-27969f59a96e
+- !<SceneObject/64904b92-decc-44d9-ac3d-e5058936bf05>
+  PrefabRemaps:
+    []
+  Name: VFX Graph
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 40.000000, z: -50.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> df435872-e732-48eb-b633-20c07bc940e8
 - !<ScriptComponent/64a09b51-f910-470b-90da-0210d1f9b918>
   PrefabRemaps:
     []
@@ -6617,7 +6634,7 @@
   Enabled: true
   Layers: 1
   LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: -20.958878}
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
     rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
@@ -8262,6 +8279,21 @@
   Components:
     - !<own> 9633ed8e-fd3a-4ac8-82e3-11918f173d7e
     - !<own> db2a3112-01e9-4782-b1aa-c1f6305374e2
+- !<SceneObject/cbcaa9bd-1482-499d-8c5a-8024baed0e79>
+  PrefabRemaps:
+    []
+  Name: Material
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> e7a242ad-0474-4925-a9d4-6a52a66f40db
 - !<ScriptComponent/cbee3731-e467-49d2-b637-2b9294830fe5>
   PrefabRemaps:
     []
@@ -8825,6 +8857,19 @@
   ForceCompound: false
   Intangible: false
   ShowCollider: false
+- !<VFXComponent/df435872-e732-48eb-b633-20c07bc940e8>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> d5583c96-4bb9-43a5-b4d4-5b818a7ab1b0
 - !<SceneObject/e02f5b06-9443-4b8a-a2ba-c4d4f6730f3c>
   PrefabRemaps:
     []
@@ -9183,6 +9228,26 @@
   Components:
     - !<own> 0cc1dbf3-b956-4ad4-9a41-8d8feac9a1ca
     - !<own> 5b842142-9e5c-49d3-a743-1983d8641f9c
+- !<RenderMeshVisual/e7a242ad-0474-4925-a9d4-6a52a66f40db>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 941e78cc-a448-4042-b38a-051e619b30b0
+  Mesh: !<reference> 6267b72b-c81e-4d8d-ba83-ad9206d70800
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
 - !<SceneObject/e7a287d0-2fdf-428e-b061-fe2cad6fb207>
   PrefabRemaps:
     []

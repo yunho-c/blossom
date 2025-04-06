@@ -28,6 +28,7 @@ export class NewScript extends BaseScriptComponent {
     public spawnIdea(name: string, type: string) {
       let newball = this.ballPrefab.instantiate(this.getSceneObject());
       newball.getTransform().setWorldPosition(this.generateRandomPosition());
+      // newball.
       return newball
     }
 
@@ -128,7 +129,7 @@ export class NewScript extends BaseScriptComponent {
             const force = direction.uniformScale(forceMagnitude * spring_scale);
 
             // // Add a damping term to reduce oscillations or excessive movement
-            // const dampingFactor = 10; // Adjust the damping factor as needed
+            // const dampingFactor = 0.1; // Adjust the damping factor as needed
             // const velocity = currentObject.getComponent("Physics.BodyComponent").velocity
             // const dampingForce = velocity.uniformScale(-dampingFactor);
 

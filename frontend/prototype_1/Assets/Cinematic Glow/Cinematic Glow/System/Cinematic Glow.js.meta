@@ -1,0 +1,57 @@
+- !<AssetImportMetadata/04981440-cf68-4921-9975-1e7a2cf474e8>
+  ImportedAssetIds:
+    JavaScriptAsset: !<reference> b193f446-6284-49b8-a6f0-0dcfc0e8592b
+  ImporterName: JavaScriptAssetImporter
+  PrimaryAsset: !<reference> b193f446-6284-49b8-a6f0-0dcfc0e8592b
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    AssetLibraryId: 6PK2aeKSon3QIGFdxXe3iC
+  AssetDataMap:
+    JavaScriptAsset: !<own> bbde5864-f4a9-46bb-8c15-e59b14265392
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ScriptAssetData/bbde5864-f4a9-46bb-8c15-e59b14265392>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e263780c-f7d7-4f32-b214-688e59b44830
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cinematicGlowRenderer: false
+    compositeTarget: false
+    customRenderOrder: false
+    doNotGlow: false
+    glowExample: false
+    glowMatteTarget: false
+    glowOccluder: false
+    glowRenderOrder: false
+    mainCamera: false
+    showHidden: false
+    warnPostEffects: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - doNotGlow: false
+      compositeTarget: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      mainCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      warnPostEffects: true
+      showHidden: false
+      glowMatteTarget: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      cinematicGlowRenderer: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowOccluder: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      glowExample: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      customRenderOrder: false
+      glowRenderOrder: -100
+  ScriptTypes:
+    -
+      {}
