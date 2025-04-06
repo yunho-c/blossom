@@ -1,0 +1,39 @@
+- !<AssetImportMetadata/ca2cff96-5716-4d76-9ef7-ddf4ae4da7d7>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3932d833-2541-477b-b7a4-89444232f90a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3932d833-2541-477b-b7a4-89444232f90a
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2697b0fe-781d-4785-9b04-4caf64a1efab
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2697b0fe-781d-4785-9b04-4caf64a1efab>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 74f11e58-e43b-4967-bf58-727c436452d1
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    ballPrefab: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - ballPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.ObjectPrefab ballPrefab

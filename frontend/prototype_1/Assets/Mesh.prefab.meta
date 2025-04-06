@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/415e16a3-b5bc-45d3-b265-43b3196e6baa>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 844cbcb1-e0dd-4a46-b115-cd1d1e6dc0ef
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 844cbcb1-e0dd-4a46-b115-cd1d1e6dc0ef
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> a4a2d5ce-f7e2-40d8-9bef-a13377bb35f3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<RenderMeshVisual/04e28dd7-7f3f-4791-af5f-703062ff1c56>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> f631ba24-eebb-47c2-91eb-2a8bc4708fb4
+  Mesh: !<reference> 90f441d7-209a-41d0-a48e-b33ad32fcac5
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/0b0676ae-0004-4c24-a4c3-359ee1a4ba57>
+  PrefabRemaps:
+    []
+  Name: Mesh
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 04e28dd7-7f3f-4791-af5f-703062ff1c56
+- !<ObjectPrefab/9c70ba39-9609-43f6-894e-8627e8432bd3>
+  PackagePath: ""
+  objects:
+    - !<own> 0b0676ae-0004-4c24-a4c3-359ee1a4ba57
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/a4a2d5ce-f7e2-40d8-9bef-a13377bb35f3>
+  SourceRemaps:
+    - 123d9a08-4f3f-45e6-9f3a-5a28f20dcbce: 0b0676ae-0004-4c24-a4c3-359ee1a4ba57
+    - 4a5b6af4-b3a1-4768-909b-4dabe7d97e08: 04e28dd7-7f3f-4791-af5f-703062ff1c56
+    - 844cbcb1-e0dd-4a46-b115-cd1d1e6dc0ef: 9c70ba39-9609-43f6-894e-8627e8432bd3
+  SourceState: !<own> 9c70ba39-9609-43f6-894e-8627e8432bd3

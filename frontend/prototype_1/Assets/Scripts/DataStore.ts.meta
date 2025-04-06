@@ -29,6 +29,7 @@
     debugDataString: false
     debugSimiString: false
     fetchBlossomData: false
+    ideaGenerator: false
   ScriptTypesHidden:
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
@@ -36,10 +37,12 @@
     - debugDataString: !<reference.Text> 00000000-0000-0000-0000-000000000000
       fetchBlossomData: !<MappingBased.FetchBlossomData> 00000000-0000-0000-0000-000000000000
       debugSimiString: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      ideaGenerator: !<MappingBased.IdeaGenerator> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input FetchBlossomData fetchBlossomData
+    - // @input IdeaGenerator ideaGenerator
     - // @input Component.Text debugDataString
     - // @input Component.Text debugSimiString

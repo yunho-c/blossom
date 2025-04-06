@@ -6,6 +6,7 @@
 
 // import { FetchData } from "./FetchData"; // ORIG
 import { FetchBlossomData } from "./FetchBlossomData";
+import { IdeaGenerator } from "./IdeaGenerator";
 
 // NOTE: maybe turn stuff into types/interfaces to help organize.
 
@@ -19,6 +20,9 @@ export class DataStore extends BaseScriptComponent {
   @input
   // fetchData: FetchData; // Component to fetch blossom data // ORIG
   fetchBlossomData: FetchBlossomData; // Component to fetch blossom data
+
+  @input
+  ideaGenerator: IdeaGenerator; // Component to fetch blossom data
 
   @input
   debugDataString: Text;
@@ -50,7 +54,6 @@ export class DataStore extends BaseScriptComponent {
     });
   }
 
-
   // functions to be triggered via buttons
 
   public getSampleFruitData() {
@@ -65,4 +68,9 @@ export class DataStore extends BaseScriptComponent {
     this.fetchBlossomData.calculateSimilarity(this.items)
   }
 
+  public spawnIdeas() {
+    for (var item of this.items) {
+      this.ideaGenerator.spawnIdea(item, "evidence")
+    }
+  }
 }
