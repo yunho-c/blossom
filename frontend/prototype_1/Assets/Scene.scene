@@ -8,7 +8,7 @@
     - !<own> a4a2df2d-a365-43ab-988b-c1ebffe2757f
     - !<own> b638782f-231b-48e1-bd47-55fb03e9889b
     - !<own> 48529d82-5ce6-4e2f-9e27-5df07e8c9876
-    - !<own> acb0e266-01ff-4e48-929e-c4bf9b7ac237
+    - !<own> 14f22bec-a3a9-4e48-8dff-725079cdd372
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -1183,7 +1183,7 @@
     {}
   ScriptInputs:
     "":
-      {}
+      debugDataString: !<reference.Text> 3b5098e7-8ea3-4f4f-b4b8-d76de6fed233
   ScriptTypes:
     "":
       {}
@@ -1616,7 +1616,7 @@
 - !<SceneObject/43618bc3-3e4f-4f03-8052-1bb328268bd5>
   PrefabRemaps:
     []
-  Name: GetSampleDataButton_Fruits
+  Name: GetSampleDataButtonFruits
   Enabled: true
   Layers: 1
   LocalTransform:
@@ -1997,21 +1997,6 @@
     - !<own> 684e986d-756b-4d2e-801b-a0930bb4ebfb
   Components:
     - !<own> 5a3e09f8-c86e-477b-89ed-0ef0edadebe4
-- !<SceneObject/48ef551d-e382-48eb-9681-9a4f3db527b1>
-  PrefabRemaps:
-    []
-  Name: DataStore
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 7a864219-fd7a-4c45-a973-21fca3dfc6b6
 - !<ScriptComponent/48f57ffa-6f74-46f8-a2ea-df9ab6b34a85>
   PrefabRemaps:
     []
@@ -3351,23 +3336,6 @@
     - !<own> 44871f7e-c754-4422-8468-ec6b87c0fb69
   Components:
     []
-- !<ScriptComponent/7a864219-fd7a-4c45-a973-21fca3dfc6b6>
-  PrefabRemaps:
-    []
-  Name: DataStore
-  Enabled: true
-  ScriptAsset: !<reference> 782a97be-7bbd-44e9-81bd-ce65613e5b32
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      fetchBlossomData: !<MappingBased.FetchBlossomData> 336825a9-b863-4ba4-ab77-fdf5c57e135e
-      debugDataString: !<reference.Text> 3b5098e7-8ea3-4f4f-b4b8-d76de6fed233
-  ScriptTypes:
-    "":
-      {}
 - !<Canvas/7a976c1b-7be9-4c2e-94b8-84a7d52bb7e5>
   PrefabRemaps:
     []
@@ -4129,7 +4097,7 @@
       editEventCallbacks: true
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 336825a9-b863-4ba4-ab77-fdf5c57e135e
       onButtonPinchedFunctionNames: !<string[]>
-        - 'getSampleData(name: "fruits")'
+        - getSampleCarData
   ScriptTypes:
     "":
       {}
@@ -4183,7 +4151,7 @@
       editEventCallbacks: true
       customFunctionForOnButtonPinched: !<reference.ScriptComponent> 336825a9-b863-4ba4-ab77-fdf5c57e135e
       onButtonPinchedFunctionNames: !<string[]>
-        - getSampleData
+        - getSampleFruitData
   ScriptTypes:
     "":
       {}
@@ -4910,22 +4878,6 @@
   ScriptTypes:
     "":
       {}
-- !<SceneObject/acb0e266-01ff-4e48-929e-c4bf9b7ac237>
-  PrefabRemaps:
-    []
-  Name: DataStore
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    - !<own> 14f22bec-a3a9-4e48-8dff-725079cdd372
-    - !<own> 48ef551d-e382-48eb-9681-9a4f3db527b1
-  Components:
-    []
 - !<ScriptComponent/ad031586-6e8e-454a-860d-11f755215e6a>
   PrefabRemaps:
     []
@@ -6477,7 +6429,7 @@
 - !<SceneObject/e88630c1-b4bf-4d76-9d37-46491606334a>
   PrefabRemaps:
     []
-  Name: GetSampleDataButton_Car
+  Name: GetSampleDataButtonCar
   Enabled: true
   Layers: 1
   LocalTransform:

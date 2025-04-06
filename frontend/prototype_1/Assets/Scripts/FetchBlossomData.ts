@@ -1,11 +1,6 @@
-// import Event from "Scripts/Events";
 import Event from "./Events";
 
 interface SampleDataResponse {
-  items: string[];
-}
-
-interface SimilarityRequest {
   items: string[];
 }
 
@@ -15,17 +10,32 @@ interface SimilarityResponse {
 }
 
 @component
-export class FetchBlossomData extends BaseScriptComponent {
-  private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
+export class BlossomDataManager extends BaseScriptComponent {
+  // DATA
+  items: string[];
 
+  // sources & interactors
+  @input
+  debugDataString: Text;
+
+  private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
   private baseUrl = "https://blossom.yunhocho.com";
 
   sampleDataReceived: Event<string[]>;
   similarityReceived: Event<SimilarityResponse>;
 
   onAwake() {
+    // Initialize events
     this.sampleDataReceived = new Event<string[]>();
     this.similarityReceived = new Event<SimilarityResponse>();
+
+    // Listen for sample data received
+    this.sampleDataReceived.add((args) => {
+      print("sampleDataReceived event triggered"); // DEBUG
+      this.items = args;
+      this.debugDataString.text = args.filter((s) => s).join(", ");
+      print(this.debugDataString); // DEBUG
+    });
   }
 
   public getSampleData(name: string) {
@@ -46,11 +56,11 @@ export class FetchBlossomData extends BaseScriptComponent {
   }
 
   public getSampleFruitData() {
-    this.getSampleData("fruits")
+    this.getSampleData("fruits");
   }
 
   public getSampleCarData() {
-    this.getSampleData("cars")
+    this.getSampleData("cars");
   }
 
   public calculateSimilarity(items: string[]) {
@@ -70,68 +80,3 @@ export class FetchBlossomData extends BaseScriptComponent {
       .catch(failAsync);
   }
 }
-
-
-/////////////////////////////////////////////////////////// ORIG
-
-// import Event from "./Events";
-// // import Event from "Scripts/Events";
-
-// const BASE_URL = "https://blossom.yunhocho.com";
-
-// interface ItemResponse {
-//   items: string[];
-// }
-
-// interface SimilarityResponse {
-//   items: string[];
-//   similarity_matrix: number[][];
-// }
-
-// @component
-// export class FetchData extends BaseScriptComponent {
-//   private remoteService: RemoteServiceModule = require("LensStudio:RemoteServiceModule");
-
-//   sampleDataReceived: Event<ItemResponse>;
-//   similarityReceived: Event<SimilarityResponse>;
-
-//   onAwake() {
-//     this.sampleDataReceived = new Event<ItemResponse>();
-//     this.similarityReceived = new Event<SimilarityResponse>();
-//   }
-
-//   public getSampleData(name: string) {
-//     this.remoteService
-//       .fetch(`${BASE_URL}/sample_data?name=${name}`, {
-//         method: "GET",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//       })
-//       .then((response) => response.json())
-//       .then((data) => {
-//         // print(data); // DEBUG
-//         let sampleData = data as ItemResponse;
-//         this.sampleDataReceived.invoke(sampleData);
-//       })
-//       .catch(failAsync);
-//   }
-
-//   public calculateSimilarity(items: string[]) {
-//     this.remoteService
-//       .fetch(`${BASE_URL}/similarity`, {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify({ items }),
-//       })
-//       .then((response) => response.json())
-//       .then((data) => {
-//         // print(data); // DEBUG
-//         let similarityData = data as SimilarityResponse;
-//         this.similarityReceived.invoke(similarityData);
-//       })
-//       .catch(failAsync);
-//   }
-// }
