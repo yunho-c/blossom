@@ -27,6 +27,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     debugDataString: false
+    debugSimiString: false
     fetchBlossomData: false
   ScriptTypesHidden:
     {}
@@ -34,9 +35,11 @@
   DefaultScriptInputs:
     - debugDataString: !<reference.Text> 00000000-0000-0000-0000-000000000000
       fetchBlossomData: !<MappingBased.FetchBlossomData> 00000000-0000-0000-0000-000000000000
+      debugSimiString: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input FetchBlossomData fetchBlossomData
     - // @input Component.Text debugDataString
+    - // @input Component.Text debugSimiString

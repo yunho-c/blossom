@@ -45,14 +45,6 @@ export class FetchBlossomData extends BaseScriptComponent {
       .catch(failAsync);
   }
 
-  public getSampleFruitData() {
-    this.getSampleData("fruits")
-  }
-
-  public getSampleCarData() {
-    this.getSampleData("cars")
-  }
-
   public calculateSimilarity(items: string[]) {
     this.remoteService
       .fetch(`${this.baseUrl}/similarity`, {
