@@ -1,5 +1,4 @@
 // source: https://github.com/Snapchat/Spectacles-Sample/blob/main/Fetch/Assets/Scripts/Events.ts
-
 export type callback<Arg> = (args: Arg) => void;
 
 export default class Event<Arg = void> {
