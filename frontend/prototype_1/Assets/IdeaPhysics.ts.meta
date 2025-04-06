@@ -28,15 +28,18 @@
   ScriptInputsHidden:
     ballPrefab: false
     stormObject: false
+    textPrefab: false
   ScriptTypesHidden:
     {}
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - ballPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       stormObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      textPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject stormObject
     - // @input Asset.ObjectPrefab ballPrefab
+    - // @input Asset.ObjectPrefab textPrefab

@@ -48,5 +48,5 @@
     - '// @input vec4 hoveringColor = "{1, 1, 0.04, 1}" {"hint":"This is the colour of the outline when hovered", "widget":"color"}'
     - '// @input vec4 activatingColor = "{1, 1, 1, 1}" {"hint":"This is the colour of the outline when pinched", "widget":"color"}'
     - '// @input float outlineWeight = 0.25 {"hint":"This is the thickness of the outline"}'
-    - '// @input Component.RenderMeshVisual[] meshVisuals {"hint":"These are the meshes that will be outlined on pinch/hover"}'
+    - '// @input Component.RenderMeshVisual[] meshVisuals = {} {"hint":"These are the meshes that will be outlined on pinch/hover"}'
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

@@ -1,0 +1,41 @@
+- !<ObjectPrefab/d72d3116-85b8-41f2-8312-b6fbab408d5c>
+  PackagePath: ""
+  objects:
+    - !<own> e341ff4a-185d-4bef-a358-3343868c8ff6
+  LazyLoading: false
+  RetainAssets: true
+- !<ScriptComponent/7a0d5466-9d48-4871-aee1-39727fdb8cbe>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  ScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ScriptInputsDefault:
+    collider: true
+    handColliderName: true
+    textObject: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      handColliderName: ColliderTargetProvider
+      textObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/e341ff4a-185d-4bef-a358-3343868c8ff6>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 7a0d5466-9d48-4871-aee1-39727fdb8cbe

@@ -10,15 +10,42 @@ export class NewScript extends BaseScriptComponent {
     @input
     public ballPrefab: ObjectPrefab;
 
+    @input
+    public textPrefab: ObjectPrefab;
+
+    // private init() {
+    //     const rootObject = this.getSceneObject();
+    //     if (rootObject) {
+    //         for (let item of this.items) {
+    //             let object = this.spawnIdea(item, "evidence");
+    //             this.subSceneObjects.push(object);
+    //             let text = this.textPrefab.instantiate(object);
+    //             // text.name = item; // ?
+    //             text.name = "abc"; // ?
+    //             // var text3DComponent = object.getComponent("Component.Text3D");
+    //             var text3DComponent = object.getComponent("Text");
+    //             text3DComponent.text = "New Text";
+    //         }
+    //     }
+    // }
     private init() {
-        const rootObject = this.getSceneObject();
-        if (rootObject) {
-            for (let item of this.items) {
-                let object = this.spawnIdea(item, "evidence");
-                this.subSceneObjects.push(object);
-            }
-        }
-    }
+      const rootObject = this.getSceneObject();
+      if (rootObject) {
+          for (let item of this.items) {
+              let object = this.spawnIdea(item, "evidence");
+              this.subSceneObjects.push(object);
+
+              let textObject = this.textPrefab.instantiate(object); // attach to `object`
+              textObject.name = item; // or "abc"
+
+              let textComponent = textObject.getComponent("Text"); // Get from `textObject`, not `object`
+              if (textComponent) {
+                  textComponent.text = item; // Or whatever text you want
+                  print(textComponent)
+              }
+          }
+      }
+  }
 
     onAwake() {
         this.init();
@@ -28,6 +55,7 @@ export class NewScript extends BaseScriptComponent {
     public spawnIdea(name: string, type: string) {
       let newball = this.ballPrefab.instantiate(this.getSceneObject());
       newball.getTransform().setWorldPosition(this.generateRandomPosition());
+
       // newball.
       return newball
     }

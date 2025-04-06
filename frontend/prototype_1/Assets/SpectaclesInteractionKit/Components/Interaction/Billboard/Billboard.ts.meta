@@ -51,6 +51,6 @@
     - // @input bool _zAxisEnabled
     - '// @input vec3 _axisBufferDegrees = {0,0,0} {"hint":"How big the angle must be to start rotating about that axis"}'
     - '// @input vec3 _axisEasing = {1,1,1} {"hint":"How fast the target should rotate to follow camera, instant follow = 1, delay follow = 0.1"}'
-    - '// @input float duration = 0.033 {"hint":"The expected duration between updates, expecting ~30FPS = 0.033; lower duration = faster rotation"}'
+    - '// @input float duration = 0.033 {"hint":"Decrecated. Please use the property Axis Easing to adjust the rotation speed"}'
     - '// @ui {"widget":"group_end"}'
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

@@ -1,0 +1,45 @@
+- !<AssetImportMetadata/de78f76b-144f-45b2-a8b9-11b6095fb4a6>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 7483b554-8ae7-45ab-a42b-dc597cf6de2e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/7483b554-8ae7-45ab-a42b-dc597cf6de2e>
+  SvgIcon: ""
+  Description: ""
+  InternalVersion: 0
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f31ef74-52e4-41d0-9a0b-00b2048d925b
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    collider: false
+    handColliderName: false
+    textObject: false
+  ScriptTypesHidden:
+    {}
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      handColliderName: ColliderTargetProvider
+      textObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.ColliderComponent collider
+    - '// @input string handColliderName = "ColliderTargetProvider"'
+    - // @input SceneObject textObject
