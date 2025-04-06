@@ -41,7 +41,7 @@
     -
       {}
   InputLines:
-    - "// @input Asset.RenderMesh[] meshes = {}"
-    - "// @input float[] thresholds = {}"
+    - "// @input Asset.RenderMesh[] meshes"
+    - "// @input float[] thresholds"
     - // @input Asset.Material material
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

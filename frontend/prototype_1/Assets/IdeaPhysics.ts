@@ -34,6 +34,7 @@ export class NewScript extends BaseScriptComponent {
           for (let item of this.items) {
               let object = this.spawnIdea(item, "evidence");
               this.subSceneObjects.push(object);
+              stringToColor
 
               let textObject = this.textPrefab.instantiate(object); // attach to `object`
               textObject.name = item; // or "abc"
@@ -41,7 +42,16 @@ export class NewScript extends BaseScriptComponent {
               let textComponent = textObject.getComponent("Text"); // Get from `textObject`, not `object`
               if (textComponent) {
                   textComponent.text = item; // Or whatever text you want
-                  print(textComponent)
+                  // print(textComponent) // DEBUG
+              }
+
+              const mesh = object.getComponent("Component.MeshVisual");
+              if (mesh) {
+                  print("There is mesh!")
+                  const material = mesh.mainMaterial.clone(); // Optional: clone if you don't want to affect others
+                  const randomColor = d3SchemeCategory10[Math.floor(Math.random() * 10)];
+                  material.mainPass.baseColor = new vec4(randomColor[0]/255, randomColor[1]/255, randomColor[2]/255, 1);
+                  mesh.mainMaterial = material;
               }
           }
       }
@@ -179,9 +189,9 @@ export class NewScript extends BaseScriptComponent {
             const holdDistance = 20
             const holdScale = 1/((distance)**2) * k
 
-            print("chargeForce: " + chargeForce.length.toString());
+            // print("chargeForce: " + chargeForce.length.toString()); // DEBUG
             const forceDifference = chargeForce.sub(force).length;
-            print(`${forceDifference.toString()}`);
+            // print(`${forceDifference.toString()}`); // DEBUG
 
             totalForce = totalForce.add(chargeForce)
 
@@ -195,3 +205,43 @@ export class NewScript extends BaseScriptComponent {
         }}
     }
 }
+
+/**
+ * Generates a consistent RGB color from a string input
+ * @param input The input string to generate color from
+ * @returns RGB color string in format "rgb(R, G, B)"
+ */
+export function stringToColor(input: string): string {
+  // Simple hash function to convert string to number
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+      hash = input.charCodeAt(i) + ((hash << 5) - hash);
+  }
+
+  // Convert hash to RGB components
+  const r = (hash & 0xFF0000) >> 16;
+  const g = (hash & 0x00FF00) >> 8;
+  const b = hash & 0x0000FF;
+
+  // Ensure minimum brightness
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  if (brightness < 128) {
+      // If too dark, adjust by inverting the color
+      return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
+  }
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+let d3SchemeCategory10 = [
+  [31, 119, 180],
+  [255, 127, 14],
+  [44, 160, 44],
+  [214, 39, 40],
+  [148, 103, 189],
+  [140, 86, 75],
+  [227, 119, 194],
+  [127, 127, 127],
+  [188, 189, 34],
+  [23, 190, 207]
+];

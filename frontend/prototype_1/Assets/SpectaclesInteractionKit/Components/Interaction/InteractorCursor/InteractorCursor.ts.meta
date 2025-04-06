@@ -27,19 +27,19 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     _interactor: false
-    enableCursorHolding: false
+    enableCursorSnapping: false
     enableFilter: false
   ScriptTypesHidden:
     {}
   DefaultScriptInputs:
     - enableFilter: false
       _interactor: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
-      enableCursorHolding: true
+      enableCursorSnapping: true
   ScriptTypes:
     -
       {}
   InputLines:
-    - // @input bool enableCursorHolding = true
+    - // @input bool enableCursorSnapping = true
     - // @input bool enableFilter
     - // @input Component.ScriptComponent _interactor
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

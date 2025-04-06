@@ -51,5 +51,5 @@
     - // @input Asset.Material toggledOnMaterial
     - // @input Asset.Material toggledOnSelectMaterial
     - // @input Asset.Material disabledMaterial
-    - "// @input Component.RenderMeshVisual[] meshVisuals = {}"
+    - "// @input Component.RenderMeshVisual[] meshVisuals"
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

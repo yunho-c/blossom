@@ -1,0 +1,129 @@
+- !<AssetImportMetadata/efc1abc7-dff8-4ab4-aab1-92170d033024>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> 2990bce6-9a32-405f-9350-ddf7226e61eb
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> 2990bce6-9a32-405f-9350-ddf7226e61eb
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> c1937d96-6104-4699-8887-085881219c54
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefab/138ff1d0-2fe7-4b8c-90bc-2bf8cbfb9fa8>
+  PackagePath: ""
+  objects:
+    - !<own> 8aef44ad-7e58-4296-860b-a10bb745cf8d
+  LazyLoading: false
+  RetainAssets: true
+- !<BodyComponent/4f596704-e690-47ca-b322-970260731b7a>
+  PrefabRemaps:
+    []
+  Name: Physics Body
+  Enabled: true
+  Shape: !<Box>
+    FitVisual: true
+    Size: {x: 15.000000, y: 15.000000, z: 15.000000}
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 32fa292a-8acb-469e-b941-e9ec518d8ca0
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: true
+  ShowCollider: false
+  Dynamic: true
+  BodySetting: Density
+  BodySettingValue: 1.000000
+  Damping: 0.050000
+  AngularDamping: 0.000000
+- !<SceneObject/8aef44ad-7e58-4296-860b-a10bb745cf8d>
+  PrefabRemaps:
+    []
+  Name: Box Body
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 20.543789, y: -10.493813, z: -17.231644}
+    rotation: {x: 0.000000, y: -0.000000, z: 0.000000}
+    scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c21d5b1d-558c-422a-a7ec-14a7ef240231
+    - !<own> 4f596704-e690-47ca-b322-970260731b7a
+    - !<own> e9d02f5a-aa46-4896-bc0c-3cdc5542ec79
+    - !<own> 8fe08761-9545-4702-a7e8-c2bca8b9d8c2
+- !<ScriptComponent/8fe08761-9545-4702-a7e8-c2bca8b9d8c2>
+  PrefabRemaps:
+    []
+  Name: Interactable
+  Enabled: true
+  ScriptAsset: !<reference> 652e631a-22d0-4941-9f74-2943df59f34c
+  ScriptInputsDefault:
+    targetingMode: true
+    enableInstantDrag: true
+    allowMultipleInteractors: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      targetingMode: !<float> 3.000000
+      enableInstantDrag: false
+      allowMultipleInteractors: true
+  ScriptTypes:
+    "":
+      {}
+- !<ObjectPrefabAssetData/c1937d96-6104-4699-8887-085881219c54>
+  SourceRemaps:
+    - 1af557ac-ece6-49c8-aed5-833a17f38ad9: 8aef44ad-7e58-4296-860b-a10bb745cf8d
+    - 2990bce6-9a32-405f-9350-ddf7226e61eb: 138ff1d0-2fe7-4b8c-90bc-2bf8cbfb9fa8
+    - 370e439b-355f-4058-a6d2-0efd29f0e06d: c21d5b1d-558c-422a-a7ec-14a7ef240231
+    - 433189d6-9a1d-4473-b717-47eb577a8eab: 4f596704-e690-47ca-b322-970260731b7a
+    - 96dda70e-f652-4235-a898-aab2cdc2a149: e9d02f5a-aa46-4896-bc0c-3cdc5542ec79
+    - efa1f8bf-ab8b-4971-985e-a3906ab93ee8: 8fe08761-9545-4702-a7e8-c2bca8b9d8c2
+  SourceState: !<own> 138ff1d0-2fe7-4b8c-90bc-2bf8cbfb9fa8
+- !<RenderMeshVisual/c21d5b1d-558c-422a-a7ec-14a7ef240231>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> cba03ef7-53e1-47d1-b958-1760aec4cd57
+  Mesh: !<reference> df2e3c19-b55b-4eb1-9629-88dc02096d68
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/e9d02f5a-aa46-4896-bc0c-3cdc5542ec79>
+  PrefabRemaps:
+    []
+  Name: Grabbable
+  Enabled: true
+  ScriptAsset: !<reference> fe40f727-07e6-4882-ab29-fe81088f1e51
+  ScriptInputsDefault:
+    handColliderName: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      collider: !<reference.ColliderComponent> 4f596704-e690-47ca-b322-970260731b7a
+      handColliderName: ColliderTargetProvider
+  ScriptTypes:
+    "":
+      {}

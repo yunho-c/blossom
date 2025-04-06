@@ -26,7 +26,6 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    _enableInteractionPlane: false
     allowScaling: false
     allowTranslation: false
     autoScaleContent: false
@@ -44,6 +43,7 @@
     useBillboarding: false
     useFOVFollow: false
     useSnapping: false
+    worldCursor: false
     worldSnapping: false
     xAlways: false
     xOnTranslate: false
@@ -74,11 +74,15 @@
       useFOVFollow: false
       isFollowing: false
       showCloseButton: true
-      _enableInteractionPlane: false
+      worldCursor: !<MappingBased.CursorController> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
+    - '// @ui {"widget":"group_start", "label":"Frame Defaults"}'
+    - // @input CursorController worldCursor
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"label", "label":""}'
     - '// @ui {"widget":"group_start", "label":"Frame Settings"}'
     - // @input bool autoShowHide = true
     - '// @input vec2 innerSize = "{32,32}"'
@@ -117,9 +121,6 @@
     - '// @ui {"widget":"label", "label":""}'
     - '// @ui {"widget":"group_start", "label":"Close Button"}'
     - // @input bool showCloseButton = true
-    - '// @ui {"widget":"group_end"}'
-    - '// @ui {"widget":"group_start", "label":"Interaction Plane"}'
-    - // @input bool _enableInteractionPlane
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

@@ -48,5 +48,5 @@
     - '// @input vec4 hoverColor = "{0.28, 0.28, 0.28, 1}" {"widget":"color"}'
     - '// @input vec4 pinchedColor = "{0.46, 0.46, 0.46, 1}" {"widget":"color"}'
     - '// @input vec4 disabledColor = "{1, 1, 1, 0}" {"widget":"color"}'
-    - '// @input Component.RenderMeshVisual[] meshVisuals = {} {"hint":"The meshes which will have their baseColor changed on pinch/hover events"}'
+    - '// @input Component.RenderMeshVisual[] meshVisuals {"hint":"The meshes which will have their baseColor changed on pinch/hover events"}'
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000

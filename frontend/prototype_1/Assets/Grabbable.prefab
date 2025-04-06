@@ -13,14 +13,12 @@
   ScriptInputsDefault:
     collider: true
     handColliderName: true
-    textObject: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       collider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
       handColliderName: ColliderTargetProvider
-      textObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     "":
       {}
