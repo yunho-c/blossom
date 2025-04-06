@@ -1,47 +1,20 @@
-- !<AssetImportMetadata/28db4910-7b60-4c86-82f7-464037d7306a>
+- !<AssetImportMetadata/e0ab7ad4-2608-413b-8001-0cd05b27fa06>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> ecea9935-2787-48dc-b01c-24a9a9f2d24a
+    ObjectPrefab: !<reference> 78d951f6-515d-470e-a008-e1e1d272b664
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> ecea9935-2787-48dc-b01c-24a9a9f2d24a
+  PrimaryAsset: !<reference> 78d951f6-515d-470e-a008-e1e1d272b664
   PackageType: NotAPackage
   PackagePolicy: CannotBeUnpacked
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> 7ce79308-345b-4ddc-90d4-eecc3e13f6f4
+    ObjectPrefab: !<own> 6fc235e7-f4f6-4a94-beba-fc7cf38cf3b4
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<ObjectPrefab/66c10a1d-baa9-4267-9a79-763e188b499a>
-  PackagePath: ""
-  objects:
-    - !<own> 8aad3849-91a7-4b61-81dc-995d1431e5e1
-  LazyLoading: false
-  RetainAssets: true
-- !<ObjectPrefabAssetData/7ce79308-345b-4ddc-90d4-eecc3e13f6f4>
-  SourceRemaps:
-    - 4d0a842b-6e0f-4330-9022-d215dbb78f4e: ffb803d7-4314-475d-99df-cf919e3a2a33
-    - 7baa789a-3410-4e9c-b8df-2702573781ab: 8aad3849-91a7-4b61-81dc-995d1431e5e1
-    - ecea9935-2787-48dc-b01c-24a9a9f2d24a: 66c10a1d-baa9-4267-9a79-763e188b499a
-  SourceState: !<own> 66c10a1d-baa9-4267-9a79-763e188b499a
-- !<SceneObject/8aad3849-91a7-4b61-81dc-995d1431e5e1>
-  PrefabRemaps:
-    []
-  Name: Text
-  Enabled: true
-  Layers: 1
-  LocalTransform:
-    position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    hasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> ffb803d7-4314-475d-99df-cf919e3a2a33
-- !<Text/ffb803d7-4314-475d-99df-cf919e3a2a33>
+- !<Text/23ca6bc2-d483-44a5-8d46-c7f2a5b3f003>
   PrefabRemaps:
     []
   Name: Text
@@ -58,15 +31,15 @@
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
-  FontSize: 48
-  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  FontSize: 24
+  Font: !<reference> 13871892-0e42-478a-b77b-b29abc59c03c
   LayoutRect:
     left: -7.500000
     bottom: -2.250000
     right: 7.500000
     top: 2.250000
   OverflowVertical: Overflow
-  OverflowHorizontal: Overflow
+  OverflowHorizontal: Wrap
   Fill: !<TextFill>
     Mode: Solid
     Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
@@ -75,7 +48,7 @@
     TileZone: Rect
     TextureStretch: FitWidth
   Outline: !<OutlineSettings>
-    Enabled: false
+    Enabled: true
     Fill: !<TextFill>
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
@@ -85,7 +58,7 @@
       TextureStretch: FitWidth
     Size: 0.250000
   Dropshadow: !<DropshadowSettings>
-    Enabled: false
+    Enabled: true
     Fill: !<TextFill>
       Mode: Solid
       Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
@@ -117,3 +90,30 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<ObjectPrefab/3b8d0338-cee4-4eeb-baa1-567ee4e32a4b>
+  PackagePath: ""
+  objects:
+    - !<own> 930e8a3b-8c28-4edd-9869-1e3de91173e7
+  LazyLoading: false
+  RetainAssets: true
+- !<ObjectPrefabAssetData/6fc235e7-f4f6-4a94-beba-fc7cf38cf3b4>
+  SourceRemaps:
+    - 5e48b004-1143-4eb1-bed5-4f3f33e4cdd7: 930e8a3b-8c28-4edd-9869-1e3de91173e7
+    - 78d951f6-515d-470e-a008-e1e1d272b664: 3b8d0338-cee4-4eeb-baa1-567ee4e32a4b
+    - 9287bb4e-cf38-4ade-9154-8b27e937dead: 23ca6bc2-d483-44a5-8d46-c7f2a5b3f003
+  SourceState: !<own> 3b8d0338-cee4-4eeb-baa1-567ee4e32a4b
+- !<SceneObject/930e8a3b-8c28-4edd-9869-1e3de91173e7>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform:
+    position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    hasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 23ca6bc2-d483-44a5-8d46-c7f2a5b3f003
